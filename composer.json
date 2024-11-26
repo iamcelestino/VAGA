@@ -1,0 +1,16 @@
+{
+    "name": "dell/vaga",
+    "description": "a php website where Schools connect their best students with employers'",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Dell\\Vaga\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Celestino Trosso"
+        }
+    ],
+    "require": {}
+}
