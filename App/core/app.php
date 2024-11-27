@@ -3,7 +3,7 @@
 namespace App\Core;
 
 class App {
-    
+
     protected mixed $controller = 'home';
     protected string $method = 'index';
     protected array $params = [];
@@ -19,7 +19,6 @@ class App {
         }
 
         $controllerClasss = "App\\Controllers\\" . $this->controller;
-    
         $this->controller = new $controllerClasss();
 
         if(isset($URL[1])) {
