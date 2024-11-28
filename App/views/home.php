@@ -9,94 +9,157 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="">
-                <a href="">
-                    <span>V</span>
-                    <span>VAGA.</span>
-                </a>
-            </div>
-            <nav>
-                <li><a href="">Home</a></li>
-                <li><a href="">Procurar Emprego</a></li>
-                <li><a href="">Empresas</a></li>
-            </nav>
-            <div>
-                <li><a href="">login</a></li>
-                <li><a href="">Sign up</a></li>
-                <li><a href="">Post Job</a></li>
+    <header class="md:bg-gray-200">
+        <div class="container py-4">
+            <div class="flex justify-between items-center">
+                <div class="">
+                    <a href="">
+                        <span class="font-bold text-4xl text-blue-600">VAGA.</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center">
+                    <li class="list-none"><a href="">Home</a></li>
+                    <li class="list-none ml-4"><a href="">Procurar Emprego</a></li>
+                    <li class="list-none ml-4"><a href="">Empresas</a></li>
+                </nav>
+                <div class="flex items-center">
+                    <li class="list-none hidden sm:inline-block ml-4"><a href="">login</a></li>
+                    <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="">Sign up</a></li>
+                    <li class="list-none bg-blue-600 inline-block px-[1.2rem] py-[0.4rem] rounded-md font-medium text-white"><a href="">Post Job</a></li>
+                    <div class="flex flex-col ml-4 md:hidden">
+                        <span class="bg-slate-400 py-[3px] mb-[0.2rem] w-8 rounded-md"></span>
+                        <span class="bg-slate-400 py-[3px] mb-[0.2rem]  w-8 rounded-md"></span>
+                        <span class="bg-slate-400 py-[3px] w-8 rounded-md"></span>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
     <main>
-        <section class="">
-            <div class="container">
-                <div class="">
-                    <div class="">
+        <section class="bg-gray-200">
+            <div class="container py-9">
+                <div class="md:flex items-center justify-between">
+                    <div class="md:w-2/5">
                         <div class="">
-                            <h1>GDGDGGGDFD GDDFDDVDFD</h1>
-                            <h1>A Boa Conexao entre os melhores estudantes da nosssa universidade acontece aqui</h1
-                            <input type="search" name="search">
+                            <h1 class="text-blue-950 text-4xl md:text-4xl font-bold">Contrate os <span class="text-blue-600">melhores</span> estudantes recen <span class="text-blue-600">formados</span></h1>
+                            <p class="my-6 text-slate-600">A Boa Conexao entre os melhores estudantes da nosssa universidade acontece aqui</p>
+                            <form class=" bg-white p-2 rounded-md" action="" method="">
+                                <input type="search" name="search" class="md:w-[85%]" >
+                                <button class="bg-blue-600 text-white font-bold py-[0.4rem] px-[0.4rem] rounded-md" type="submit">Pesquisar</button>
+                            </form>
                         </div>
-                        <div class="">
-                            <span>Exemplo</span>
-                            <span>Front-end</span>
-                            <span>Back-end</span>
-                            <span>Design</span>
+                        <div class="mt-6">
+                            <span class="text-slate-400 mr-2 inline-block">Exemplo:</span>
+                            <span class="text-slate-400 font-medium border-2 border-slate-400 px-[0.8rem] py-[0.4rem] rounded-md mr-4 inline-block">Front-end</span>
+                            <span class="text-slate-400 font-medium border-2 border-slate-400 px-[0.8rem] py-[0.4rem] rounded-md mr-4 inline-block">Back-end</span>
+                            <span class="text-slate-400 font-medium border-2 border-slate-400 px-[0.8rem] py-[0.4rem] rounded-md inline-block">Design</span>
                         </div>
                     </div>
-                    <div class="">
-                        <img src="<?= ASSETS_URL?>/images/coding-4-89.svg" alt="">
+                    <div class="hidden md:inline-block md:w-2/4">
+                        <img src="<?= ASSETS_URL?>/images/coworking-31.svg" alt="">
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="area__de_trabalho">
-            <div class="container">
-                <h2>Areas de Trabalho</h2>
+            <div class="container py-9">
+                <h2 class="font-bold text-md mb-9">Areas de Trabalho</h2>
                 <div class="">
-                    <li>
-                        <ion-icon name="code-outline"></ion-icon>
-                        <a href="">Programacao</a>
-                    </li>
-                    <li>
-                        <a href="">Design</a>
-                    </li>
-                    <li>
-                        <a href="">Marketing</a>
-                    </li>
-                    <li>
-                        <a href="">Educacao</a>
-                    </li>
+                    <a href="" class="inline-block">
+                        
+                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
+                            <ion-icon class="block" name="code-outline"></ion-icon>
+                            Programacao
+                        </li>
+                    </a>
+                    <a href="" class="inline-block">
+                        
+                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
+                            <ion-icon class="block" name="code-outline"></ion-icon>
+                            Programacao
+                        </li>
+                    </a>
+                    <a href="" class="inline-block">
+                        
+                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
+                            <ion-icon class="block" name="code-outline"></ion-icon>
+                            Programacao
+                        </li>
+                    </a>
+                    <a href="" class="inline-block">
+                        
+                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
+                            <ion-icon class="block" name="code-outline"></ion-icon>
+                            Programacao
+                        </li>
+                    </a>
+                    <a href="" class="inline-block">
+                        
+                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
+                            <ion-icon class="block" name="code-outline"></ion-icon>
+                            Programacao
+                        </li>
+                    </a>
+
+                    <a href="" class="inline-block">
+                        
+                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
+                            <ion-icon class="block" name="code-outline"></ion-icon>
+                            Programacao
+                        </li>
+                    </a>
+
                 </div>
             </div>
         </section>
         <section>
             <div class="container">
-                <div class="">
-                    <h2>Trabalhos Relacionados</h2>
+                <div class="flex justify-between">
+                    <h2 class="font-bold">Trabalhos Relacionados</h2>
                     <a href="">
-                        <p>Trabalhos relacionados</p>
-                        <ion-icon name="return-up-forward-outline"></ion-icon>
+                        <ion-icon class="text-3xl" name="return-up-forward-outline"></ion-icon>
                     </a>
                 </div>
                 <div class="">
-                    <div class="">
-                        <div class="">
-                            <ion-icon name="logo-google"></ion-icon>
-                            <div class="">
-                                <div class="titulo">Product Design</div>
-                                <div class="empresa">Google Inc.</div>
+                    <div class="border-4 border-gray-400 rounded-md p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <ion-icon class="text-4xl bg-gray-400 rounded-full p-2 mr-4" name="logo-google"></ion-icon>
+                                <div class="">
+                                    <div class="titulo">Product Design</div>
+                                    <div class="empresa">Google Inc.</div>
+                                </div>
                             </div>
+                            <p class="Tipo__de_trabalho bg-blue-700 p-[0.3rem] text-white rounded-md">FullTime</p>
                         </div>
-                        <p class="Tipo__de_trabalho">FullTime</p>
                         <div>
                             <span>Photoshop</span>
                             <span>UI/UX</span>
                             <span>Canva</span>
                         </div>
+
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="border-4 border-gray-400 rounded-md p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <ion-icon class="text-4xl bg-gray-400 rounded-full p-2 mr-4" name="logo-google"></ion-icon>
+                                <div class="">
+                                    <div class="titulo">Product Design</div>
+                                    <div class="empresa">Google Inc.</div>
+                                </div>
+                            </div>
+                            <p class="Tipo__de_trabalho bg-blue-700 p-[0.3rem] text-white rounded-md">FullTime</p>
+                        </div>
+                        <div>
+                            <span>Photoshop</span>
+                            <span>UI/UX</span>
+                            <span>Canva</span>
+                        </div>
+
                     </div>
                 </div>
             </div>
