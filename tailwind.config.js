@@ -2,6 +2,8 @@ module.exports = {
     content: ["./App/views/**/*.{php,js}"],
     theme: {
       extend: {
+        backgroundImage: {
+          'section-pattern': "url('./public/assets/images/wave.svg')",
       },
       container: {
         center: true,
@@ -14,4 +16,5 @@ module.exports = {
       }
     },
     plugins: [],
+}
 }

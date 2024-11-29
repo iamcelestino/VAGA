@@ -114,14 +114,14 @@
             </div>
         </section>
         <section>
-            <div class="container">
+            <div class="container py-9">
                 <div class="flex justify-between">
                     <h2 class="font-bold">Trabalhos Relacionados</h2>
                     <a href="">
                         <ion-icon class="text-3xl" name="return-up-forward-outline"></ion-icon>
                     </a>
                 </div>
-                <div class="">
+                <div class="mb-4">
                     <div class="border-4 border-gray-400 rounded-md p-6">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center">
@@ -166,60 +166,84 @@
         </section>
 
         <section>
-            <div class="container">
-                <div>
-                    <h2>AS Melhores Empresas postam suas vagas aqui.</h2>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, optio!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sint!
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, cum.
-                    </p>
-                    <a href="">Procurar</a>
-                </div>
-                <div>
-                    <img src="<?= ASSETS_URL?>/images/analyst-22.svg" alt="">
+            <div class="container py-9">
+                <div class="flex flex-col md:flex-row md:items-center">
+                    <div class="md:w-2/4">
+                        <h2 class="text-3xl font-bold">As melhores Empresas postam suas vagas aqui.</h2>
+                        <p class="my-5">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, optio!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sint!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, cum.
+                        </p>
+                        <a class="bg-blue-600 text-white py-2 px-4 font-medium rounded-md inline-block" href="">Procurar</a>
+                    </div>
+                    <div class="md:w-2/4">
+                        <img src="<?= ASSETS_URL?>/images/analyst-22.svg" alt="">
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="">
-            <div class="container">
-                <h1>Empresas Relacionadas</h1>
-                <p>
-                    As Melhores Empresas estão a procura de Melhores estudantes
-                    candidata-se para uma Vaga.
-                </p>
-                <div>
-                    <li><a href="">GOOGLE</a></li>
-                    <li><a href=""></a>JETUR</li>
-                    <li><a href=""></a>CARRINHO</li>
-                    <li><a href=""></a>SONANGOL</li>
-                    <li><a href=""></a>BAI</li>
-                    <li><a href=""></a>ISPB</li>
+        <section >
+            <div  style="background-image: url('./public/assets/images/wave.svg');"  class="bg-no-repeat bg-center bg-cover min-h-full pb-52 pt-16">
+                <div class="text-center">
+                    <h1>Empresas Relacionadas</h1>
+                    <p>
+                        As Melhores Empresas estão a procura de Melhores estudantes
+                        candidata-se para uma Vaga.
+                    </p>
+                    <div>
+                        <li class="list-none"><a href="">GOOGLE</a></li>
+                        <li class="list-none"><a href=""></a>JETUR</li>
+                        <li class="list-none"><a href=""></a>CARRINHO</li>
+                        <li class="list-none"><a href=""></a>SONANGOL</li>
+                        <li class="list-none"><a href=""></a>BAI</li>
+                        <li class="list-none"><a href=""></a>ISPB</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container pb-16">
+                <div class="flex flex-col md:flex-row md:items-center">
+                    <div class="md:w-2/4">
+                        <img src="<?= ASSETS_URL?>/images/augmented-reality-1-20.svg" alt="">
+                    </div>
+                    <div class="md:w-2/4">
+                        <h2 class="text-3xl font-bold">As melhores Empresas postam suas vagas aqui.</h2>
+                        <p class="my-5">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, optio!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sint!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, cum.
+                        </p>
+                        <a class="bg-blue-600 text-white py-2 px-4 font-medium rounded-md inline-block" href="">Procurar</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
+    <footer class="bg-black text-white">
+        <div class="container py-9">
             <div class="">
-                <div class="">
-                    <a href="">
-                        <span>V</span>
-                        <span>VAGA.</span>
-                    </a>
+                <div class="flex items-center justify-between">
+                    <div class="">
+                        <a href="">
+                            <span class="font-bold text-4xl text-blue-600">VAGA.</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center">
+                        <ion-icon class="text-3xl" name="logo-twitter"></ion-icon>
+                        <ion-icon class="text-3xl" name="logo-linkedin"></ion-icon>
+                        <ion-icon class="text-3xl" name="logo-instagram"></ion-icon>
+                    </div>
                 </div>
-                <div class="">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </div>
-            </div>
-            <div class="">
-                <p>Copyright 2020 Vaga<span></span></p>
-                <div>
-                    <p>Police and privacy</p>
-                    <p>Terms of Service</p>
-                    <p>Security & Privacy</p>
+                <div class="flex flex-col mt-4 border-t-2 border-gray-200 pt-4 md:flex-row md:justify-between">
+                    <p class="order-2 mt-2 md:mt-0">Copyright 2020 Vaga<span></span></p>
+                    <div class="flex md:order-2">
+                        <p class="">Police and privacy</p>
+                        <p class="mx-6">Terms of Service</p>
+                        <p class="">Security & Privacy</p>
+                    </div>
                 </div>
             </div>
         </div>
