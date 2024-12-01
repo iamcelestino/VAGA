@@ -113,7 +113,9 @@ class Model extends Database
         }
 
         if(property_exists($this, 'before_insert')) {
+            
             foreach($this->before_insert as $funtion) {
+
                 $data = $this->$funtion($data);
             }
         }

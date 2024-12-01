@@ -29,51 +29,54 @@
         <section class="area__de_trabalho">
             <div class="container py-9">
                 <h2 class="font-bold text-md mb-9">Areas de Trabalho</h2>
-                <div class="">
-                    <a href="" class="inline-block">
+                <div class="sm:grid sm:grid-cols-3 md:grid-cols-6 gap-10">
                         
-                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
-                            <ion-icon class="block" name="code-outline"></ion-icon>
-                            Engenharia de software
+                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md hover:bg-blue-500 hover:scale-105 ease-out duration-300">
+                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
+                                <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
+                                 software
+                            </a>
                         </li>
-                    </a>
-                    <a href="" class="inline-block">
+           
                         
-                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
-                            <ion-icon class="block" name="code-outline"></ion-icon>
-                           Saude
+                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md hover:bg-blue-500 hover:scale-105 ease-out duration-300">
+                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
+                                <ion-icon class="block text-7xl text-gray-400" name="medkit-outline"></ion-icon>
+                                Saude
+                            </a>
                         </li>
-                    </a>
-                    <a href="" class="inline-block">
-                        
-                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
-                            <ion-icon class="block" name="code-outline"></ion-icon>
-                            lorem lorem lorem
-                        </li>
-                    </a>
-                    <a href="" class="inline-block">
-                        
-                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
-                            <ion-icon class="block" name="code-outline"></ion-icon>
-                            Agricultura
-                        </li>
-                    </a>
-                    <a href="" class="inline-block">
-                        
-                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
-                            <ion-icon class="block" name="code-outline"></ion-icon>
-                            Telecomunicoes
-                        </li>
-                    </a>
 
-                    <a href="" class="inline-block">
                         
-                        <li class="list-none bg-gray-200 mb-4 p-8 rounded-md">
-                            <ion-icon class="block" name="code-outline"></ion-icon>
-                            Educacao
+                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
+                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
+                                <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
+                                lorem lorem lorem
+                            </a>
                         </li>
-                    </a>
 
+
+                        
+                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
+                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
+                                <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
+                                Agricultura
+                            </a>
+                        </li>
+
+                        
+                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
+                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
+                                <ion-icon class="block text-7xl text-gray-400" name="cellular-outline"></ion-icon>
+                                Telecomunicoes
+                            </a>
+                        </li>
+                        
+                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
+                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
+                                <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
+                                Educacao
+                            </a>
+                        </li>
                 </div>
             </div>
         </section>
@@ -86,7 +89,7 @@
                     </a>
                 </div>
                 <div class="mb-4">
-                    <div class="border-4 border-gray-400 rounded-md p-6">
+                    <div class="border-2  border-gray-400 rounded-md p-6">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center">
                                 <ion-icon class="text-4xl bg-gray-400 rounded-full p-2 mr-4" name="logo-google"></ion-icon>
@@ -107,7 +110,7 @@
                 </div>
 
                 <div class="">
-                    <div class="border-4 border-gray-400 rounded-md p-6">
+                    <div class="border-2 border-gray-400 rounded-md p-6">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center">
                                 <ion-icon class="text-4xl bg-gray-400 rounded-full p-2 mr-4" name="logo-google"></ion-icon>
