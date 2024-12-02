@@ -9,21 +9,22 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <header class="md:bg-gray-200">
+    <header class="bg-gray-100">
         <div class="container py-4">
             <div class="flex justify-between items-center">
                 <div class="">
-                    <a href="">
+                    <a href="<?= BASE_URL ?>">
                         <span class="font-bold text-4xl text-blue-600">VAGA.</span>
                     </a>
                 </div>
                 <nav class="hidden md:flex items-center">
-                    <li class="list-none"><a href="">Home</a></li>
-                    <li class="list-none ml-4"><a href="">Procurar Emprego</a></li>
+                    <li class="list-none"><a href="<?= BASE_URL ?>">Home</a></li>
+                    <li class="list-none ml-4"><a href="<?= BASE_URL ?>emprego">Procurar Emprego</a></li>
                     <li class="list-none ml-4"><a href="">Empresas</a></li>
+                    <li class="list-none ml-4"><a href="">Estudantes</a></li>
                 </nav>
                 <div class="flex items-center">
-                    <li class="list-none hidden sm:inline-block ml-4"><a href="">login</a></li>
+                    <li class="list-none hidden sm:inline-block ml-4"><a href="<?= BASE_URL ?>login">login</a></li>
                     <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="">Sign up</a></li>
                     <li class="list-none bg-blue-600 inline-block px-[1.2rem] py-[0.4rem] rounded-md font-medium text-white"><a href="">Post Job</a></li>
                     <div class="flex flex-col ml-4 md:hidden">

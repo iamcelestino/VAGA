@@ -1,3 +1,9 @@
-RewriteEngine on
+RewriteEngine On
+
+# Redirect to public directory for the base URL
 RewriteRule ^$ public/ [L]
-RewriteRule (.*) public/$1 [L]
+
+# Forward all other requests to public/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php?url=$1 [L,QSA]

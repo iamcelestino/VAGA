@@ -25,7 +25,8 @@ class Database {
         return $this->pdo;
     }
 
-    public function query(string $query, array $data = [], string $data_type = "object") {
+    public function query(string $query, array $data = [], string $data_type = "object") 
+    {
         
         $connection = $this->connection();
         $statement = $connection->prepare($query);

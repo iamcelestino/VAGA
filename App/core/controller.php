@@ -32,7 +32,7 @@ class Controller {
             throw new \Exception("Model class $model_path not found");
         
         }
-    }
+}
 
     public function redirect( $link)
     {

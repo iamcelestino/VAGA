@@ -3,7 +3,7 @@
 namespace App\Core;
 
 class App {
-
+    
     protected mixed $controller = 'home';
     protected string $method = 'index';
     protected array $params = [];
@@ -12,10 +12,9 @@ class App {
     {   
         $URL = $this->parse_url();
 
-        if(file_exists("../App/controllers".$URL[0].".php")) {
-
+        if(file_exists(("../App/controllers/" . ucfirst($URL[0]) . ".php"))) {
             $this->controller = ucfirst($URL[0]);
-            unset($URL);
+            unset($URL[0]);
         }
 
         $controllerClasss = "App\\Controllers\\" . $this->controller;

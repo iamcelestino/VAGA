@@ -3,10 +3,10 @@
 namespace App\Controllers;
 use App\Core\Controller;
 
-class home extends Controller 
+class Emprego extends Controller
 {
     public function index() 
     {
-        $this->view('home');
+        $this->view('emprego');
     }
 }
