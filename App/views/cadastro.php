@@ -25,7 +25,7 @@
                 </nav>
                 <div class="flex items-center">
                     <li class="list-none hidden sm:inline-block ml-4"><a href="<?= BASE_URL ?>login">login</a></li>
-                    <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="<?= BASE_URL ?>cadastro">Sign up</a></li>
+                    <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="">Sign up</a></li>
                     <li class="list-none bg-blue-600 inline-block px-[1.2rem] py-[0.4rem] rounded-md font-medium text-white"><a href="">Post Job</a></li>
                     <div class="flex flex-col ml-4 md:hidden">
                         <span class="bg-slate-400 py-[3px] mb-[0.2rem] w-8 rounded-md"></span>
@@ -41,15 +41,25 @@
             <div class="container py-16">
                 <div class="md:grid md:grid-cols-2 place-content-center">
                     <div class="hidden md:grid">
-                        <img src="<?= ASSETS_URL ?>/images/authentication-1-3.svg" alt="">
+                        <img src="<?= ASSETS_URL ?>/images/fingerprint-94.svg" alt="">
                     </div>
                     <div class="bg-gray-100 p-4 sm:p-12 rounded-md">
-                        <h1 class="font-bold text-3xl"><span class="text-blue-500">Olá Outra Vez</span> <br>
-                            Seja Bem-Vindo
-                        </h1>
-                        <p class="text-gray-400 my-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, illum consequatur nisi quibusdam necessitatibus aliquam beatae, similique fuga nobis in quisquam tempore accusantium adipisci voluptas perferendis fugit dolore pariatur facere.</p>
                         <form action="" method="">
-                            <label for="email" class=" text-blue-950">Email Address</label>
+                            <div class="">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h1 class="font-bold text-3xl"><span class="text-blue-500">Vamos criar a sua</span> <br>
+                                        conta agora mesmo
+                                        </h1>
+                                        <p class="text-gray-400 my-4">TRABALHE MELHOR, VIVA MELHOR</p>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <ion-icon class="text-7xl" name="image-outline"></ion-icon>
+                                        company logo
+                                    </div>
+                                </div>
+                            </div>
+                            <label for="email" class=" text-blue-950">Nome</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-200 rounded-md"
                                 type="text"
@@ -58,7 +68,27 @@
                                 value=""
                                 placeholder="Email Address"
                             >
+
+                            <label for="password" class="text-blue-950">NIF</label>
+                            <input
+                                class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
+                                type="text"
+                                name=""
+                                id="password"
+                                value=""
+                                placeholder="Password"
+                            >
                     
+                            <label for="password" class="text-blue-950">Email</label>
+                            <input
+                                class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
+                                type="text"
+                                name=""
+                                id="password"
+                                value=""
+                                placeholder="Password"
+                            >
+
                             <label for="password" class="text-blue-950">Palavra-passe</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
@@ -72,7 +102,7 @@
                                 Ainda não tens uma conta? 
                                 <a href="<?=BASE_URL?>/signup" class="text-blue-900">Criar Conta</a>
                             </p>
-                            <button class="bg-blue-500 text-white py-[0.7rem] w-full rounded-md font-bold text-xl">Entrar</button>
+                            <button class="bg-blue-500 text-white py-[0.7rem] w-full rounded-md font-bold text-xl">Criar Conta</button>
                         </form>
                     </div>
                 </div>
