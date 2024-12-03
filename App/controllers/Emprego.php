@@ -9,4 +9,10 @@ class Emprego extends Controller
     {
         $this->view('emprego');
     }
+
+    public function post_job($id = null)
+    {
+        $this->view('postar_trabalho');
+        echo $id;
+    }
 }
