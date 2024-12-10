@@ -19,13 +19,22 @@ class Model extends Database
         } 
     }
 
-    public function where($column, $value, string $order = "ASC"): array|object
+    public function where(string $column, string $value): array|object
     {   
         $column = addslashes($column);
-        $query = "SELECT * FROM " . $this->table . " WHERE " . $column . " = : value" . "ORDER BY" . $order;
+        $query = "SELECT * FROM " . $this->table . " WHERE " . $column . " = :value";
         $data = $this->query($query, [
            'value' => $value 
         ]);
+
+        if(is_array($data)) {
+
+            if(property_exists($this, 'after_select')) {
+                foreach($this->after_select as $function) {
+                    $data = $this->$function($data);
+                }
+            }
+        }
         return $data;
     }
 
@@ -71,7 +80,7 @@ class Model extends Database
         return $data;
     }
 
-    public function insert(array $data): array|object 
+    public function insert(array $data): bool 
     {
         if(property_exists($this , 'allowed_columns')) {
 
@@ -85,7 +94,7 @@ class Model extends Database
 
         if(property_exists($this, 'before_insert')) {
 
-            foreach($tis->before_insert as $function) {
+            foreach($this->before_insert as $function) {
                 $data = $this->$function($data);
             }
         }
@@ -96,7 +105,7 @@ class Model extends Database
 
         $query = "INSERT INTO $this->table($columns) VALUES(:$values)";
 
-        return $this->query($data, $data);
+        return $this->query($query, $data);
 
     }
 
@@ -130,6 +139,7 @@ class Model extends Database
 
         $query = "UPDATE $this->table SET $strg WHERE id = :id";
         return $this->query($query, $data);
+        
     }
 
     public function delete(mixed $id) 

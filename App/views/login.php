@@ -48,31 +48,31 @@
                             Seja Bem-Vindo
                         </h1>
                         <p class="text-gray-400 my-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, illum consequatur nisi quibusdam necessitatibus aliquam beatae, similique fuga nobis in quisquam tempore accusantium adipisci voluptas perferendis fugit dolore pariatur facere.</p>
-                        <form action="" method="">
+                        <form action="" method="POST">
                             <label for="email" class=" text-blue-950">Email Address</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-200 rounded-md"
-                                type="text"
-                                name=""
-                                id=""
-                                value=""
+                                type="email"
+                                name="email"
+                                id="email"
+                                value="<?= get_var('email') ?>"
                                 placeholder="Email Address"
                             >
-                    
+
                             <label for="password" class="text-blue-950">Palavra-passe</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
-                                type="text"
-                                name=""
+                                type="password"
+                                name="password"
                                 id="password"
-                                value=""
+                                value="<?=get_var('password') ?>"
                                 placeholder="Password"
                             >
                             <p class="text-gray-400 my-2 text-center">
                                 Ainda não tens uma conta? 
                                 <a href="<?=BASE_URL?>/signup" class="text-blue-900">Criar Conta</a>
                             </p>
-                            <button class="bg-blue-500 text-white py-[0.7rem] w-full rounded-md font-bold text-xl">Entrar</button>
+                            <button type="submit" class="bg-blue-500 text-white py-[0.7rem] w-full rounded-md font-bold text-xl">Entrar</button>
                         </form>
                     </div>
                 </div>

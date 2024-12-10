@@ -44,7 +44,7 @@
                         <img src="<?= ASSETS_URL ?>/images/fingerprint-94.svg" alt="">
                     </div>
                     <div class="bg-gray-100 p-4 sm:p-12 rounded-md">
-                        <form action="" method="">
+                        <form action="" method="POST">
                             <div class="">
                                 <div class="flex items-center justify-between">
                                     <div>
@@ -59,43 +59,50 @@
                                     </div>
                                 </div>
                             </div>
-                            <label for="email" class=" text-blue-950">Nome</label>
+                            <label for="nome" class=" text-blue-950">Nome</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-200 rounded-md"
                                 type="text"
-                                name=""
-                                id=""
-                                value=""
-                                placeholder="Email Address"
+                                name="nome"
+                                id="nome"
+                                value="<?=get_var('nome')?>"
+                                placeholder="Nome"
                             >
 
-                            <label for="password" class="text-blue-950">NIF</label>
+                            <label for="Email address" class="text-blue-950">Email Address</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
                                 type="text"
-                                name=""
-                                id="password"
-                                value=""
-                                placeholder="Password"
+                                name="email"
+                                id="Email address"
+                                value="<?=get_var('email')?>"
+                                placeholder="Email address"
                             >
                     
-                            <label for="password" class="text-blue-950">Email</label>
+                            <label for="" class="text-blue-950">Endereco</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
                                 type="text"
-                                name=""
-                                id="password"
-                                value=""
-                                placeholder="Password"
+                                name="endereco"
+                                id="endereco"
+                                value="<?=get_var('endereco')?>"
+                                placeholder="Endereco"
                             >
+
+                            <select name="tipo_usuario" id="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md">
+                                <option value="">Tipo de Usuario</option>
+                                <option value="escola">Escola</option>
+                                <option value="empresa">Empresa</option>
+                                <option value="estudante">Estudante</option>
+                            </select>
 
                             <label for="password" class="text-blue-950">Palavra-passe</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
                                 type="text"
-                                name=""
+                                name="password"
                                 id="password"
-                                value=""
+                                value="<?=get_var('password')?>"
                                 placeholder="Password"
                             >
                             <p class="text-gray-400 my-2 text-center">
