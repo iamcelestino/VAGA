@@ -50,72 +50,58 @@
                                     <label class="block" for="">Titulo</label>
                                     <input class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" type="text">
                                 </div>
-                                <div class="md:flex-1">
-                                    <label class="block" for="">Descricao</label>
-                                    <input class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" type="text">
+                                <div class="tags flex-1">
+                                    
+                                    <div class="tag-list" id="tag-list"></div>
+                                    <label for="">Etiqueta</label>
+                                    <input
+                                        class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
+                                        type="text"
+                                        id="tag-input"
+                                        placeholder="Add a tag"
+                                        onkeypress="addTag(event)"
+                                    />
+                                    </div>
+
+                                    <input type="hidden" name="tags" id="tags" />
+                                    <input type="hidden" name="job_id" value="1">
                                 </div>
                             </div>
                             <div class="md:flex gap-8">
                                 <div class="md:flex-1">
-                                    <label class="block" for="">Titulo</label>
-                                    <input class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" type="text">
+                                    <label class="block" for="">Data Limite</label>
+                                    <input class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" type="date">
                                 </div>
                                 <div class="md:flex-1">
-                                    <label class="block" for="">Descricao</label>
+                                    <label class="block" for="">Qualificao</label>
                                     <input class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" type="text">
                                 </div>
                             </div>
 
                             <div class="md:flex gap-8">
-                                <div class="md:flex-1">
-                                    <label class="block" for="">Titulo</label>
-                                    <input class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" type="text">
-                                </div>
-                                <div class="md:flex-1">
-                                    <label class="block" for="">Descricao</label>
-                                    <input class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" type="text">
-                                </div>
+                                <select class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" name="" id="">
+                                    <option value="">Seleciona o estado da vaga</option>
+                                    <option value="">activo</option>
+                                    <option value="">inactivo</option>
+                                    <option value="">preenchido</option>
+                                </select>
+                                <select class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" name="" id="">
+                                    <option value="">Selecione o Tipo de vaga</option>
+                                    <option value="">Temp integral</option>
+                                    <option value="">Meio periodo</option>
+                                    <option value="">Freelancer</option>
+                                    <option value="">Temporario</option>
+                                </select>
                             </div>
-                            <div class="md:flex gap-8">
-                                <div class="flex-1">
-                                    <label for="">Qualificacao</label>
-                                    <input type="text" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md">
-                                </div>
-                                <div class="flex items-center bg-gray-100 flex-1 ">
-                                    <div class="">
-                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                        <label for="vehicle1"> I have a bike</label><br>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                        <label for="vehicle1"> I have a bike</label><br>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                        <label for="vehicle1"> I have a bike</label><br>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                        <label for="vehicle1"> I have a bike</label><br>
-                                    </div>
-                                </div>
-                            </div>
+                            <div>
                             <div class="">
+                                <label for="">Descrição</label>
                                 <textarea class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"  name="" id=""></textarea>
-                            </div>
-                            <div class="">
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="vehicle1"> I have a bike</label><br>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="vehicle1"> I have a bike</label><br>
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="vehicle1"> I have a bike</label><br>
                             </div>
                         </div>
                         <div class="flex justify-center">
                             <button class="bg-blue-500 py-2 px-[2rem] text-white font-bold rounded-md">Abrir Cnadidadutura</button>
                         </div>
-                       
                     </form>
                 </div>
             </div>
