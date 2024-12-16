@@ -24,6 +24,7 @@
         </div>
     </div>
 </div>
+    <script src="<?=ASSETS_URL ?>/js/app.js"></script>
 </footer>
 </body>
 </html>

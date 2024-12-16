@@ -59,6 +59,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <label for="nome" class=" text-blue-950">Nome</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-200 rounded-md"
@@ -88,13 +89,37 @@
                                 value="<?=get_var('endereco')?>"
                                 placeholder="Endereco"
                             >
+                            <div class="">
+                                <select name="tipo_usuario" id="tipo_usuario" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" onchange="
+                                mostraCampoParaEmpresa()">
+                                    <option value="">Tipo de Usuario</option>
+                                    <option value="escola">Escola</option>
+                                    <option value="empresa">Empresa</option>
+                                    <option value="estudante">Estudante</option>
+                                </select>
+                            </div>
+                            <div id="empresa" class="">
+                                <input type="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" name="NIF">
+                                <select name="sector" id="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md">
+                                    <option value="">Sector</option>
+                                    <option value="Finanças">Finanças</option>
+                                    <option value="Educação">Educação</option>
+                                    <option value="Saúde">Saúde</option>
+                                    <option value="Tecnologia">Tecnologia</option>
+                                    <option value="outro">Tecnologia</option>
+                                </select>
+                            </div>
 
-                            <select name="tipo_usuario" id="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md">
-                                <option value="">Tipo de Usuario</option>
-                                <option value="escola">Escola</option>
-                                <option value="empresa">Empresa</option>
-                                <option value="estudante">Estudante</option>
-                            </select>
+                            <div class="" id="estudante">
+                                <div>
+                                    <label for="data_nascimento" class="">Data de Nascimento</label>
+                                    <input type="text" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" placeholder="data de nascimento">
+                                </div>
+                                <div class="">
+                                    <label class="" for="">Curso</label>
+                                    <input type="text" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" placeholder="curso">
+                                </div>
+                            </div>
 
                             <label for="password" class="text-blue-950">Palavra-passe</label>
                             <input
@@ -116,4 +141,7 @@
             </div>
         </section>
     </main>
+    <script>
+     
+    </script>
 <?php $this->view('partials/footer') ?>

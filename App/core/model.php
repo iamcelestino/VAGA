@@ -19,7 +19,7 @@ class Model extends Database
         } 
     }
 
-    public function where(string $column, string $value): array|object
+    public function where(string $column, string $value): array|object|bool
     {   
         $column = addslashes($column);
         $query = "SELECT * FROM " . $this->table . " WHERE " . $column . " = :value";

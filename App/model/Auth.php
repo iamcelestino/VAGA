@@ -24,5 +24,17 @@ class Auth
         }
         return false;
     }
+
+    public static function __callStatic($method, $params):mixed
+    {
+        $prop = strtolower(str_replace("get","", $method));
+
+        if(isset($_SESSION['USUARIO']->$prop)) {
+
+            return $_SESSION['USUARIO']->$prop;
+            
+        }
+        return "unknown";
+    }
 }
 

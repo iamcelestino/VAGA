@@ -24,11 +24,14 @@ class Login extends Controller
                     Auth::authenticate($dados_usuario);
                     $this->redirect('/home');
                 }
+            }else {
+               $this->redirect('login/account_not_found');
             }
 
             $erros['email'] = "Palavra passe or email errados!";
 
         }
+        
         $this->view('login', [
             'erros' => $erros
         ]);
