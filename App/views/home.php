@@ -28,13 +28,13 @@
 
         <section class="area__de_trabalho">
             <div class="container py-9">
-                <h2 class="font-bold text-md mb-9">Areas de Trabalho</h2>
-                <div class="sm:grid sm:grid-cols-3 md:grid-cols-6 gap-10">
+                <h2 class="font-bold text-xl text-blue-950 mb-9">Areas de Trabalho</h2>
+                <div class="sm:grid sm:grid-cols-3 md:grid-cols-5 gap-10">
                         
                         <li class="list-none bg-gray-100 mb-4 p-8 rounded-md hover:bg-blue-500 hover:scale-105 ease-out duration-300">
                             <a href="" class="flex flex-col items-center text-blue-950 font-bold">
                                 <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
-                                 software
+                                 Tecnologia
                             </a>
                         </li>
            
@@ -48,28 +48,21 @@
                         <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
                             <a href="" class="flex flex-col items-center text-blue-950 font-bold">
                                 <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
-                                lorem lorem lorem
+                                Educacao
                             </a>
                         </li>
 
                         <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
                             <a href="" class="flex flex-col items-center text-blue-950 font-bold">
                                 <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
-                                Agricultura
-                            </a>
-                        </li>
-
-                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
-                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
-                                <ion-icon class="block text-7xl text-gray-400" name="cellular-outline"></ion-icon>
-                                Telecomunicoes
+                                Financas
                             </a>
                         </li>
                         
                         <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
                             <a href="" class="flex flex-col items-center text-blue-950 font-bold">
                                 <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
-                                Educacao
+                                Outras areas
                             </a>
                         </li>
                 </div>
@@ -79,34 +72,13 @@
         <section>
             <div class="container py-9">
                 <div class="flex justify-between">
-                    <h2 class="font-bold">Trabalhos Relacionados</h2>
+                    <h2 class="font-bold text-xl text-blue-950">Trabalhos Relacionados</h2>
                     <a href="">
                         <ion-icon class="text-3xl" name="return-up-forward-outline"></ion-icon>
                     </a>
                 </div>
                 <div class="mb-4">
-                    <div class="border-2  border-gray-400 rounded-md p-6">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <ion-icon class="text-4xl bg-gray-400 rounded-full p-2 mr-4" name="logo-google"></ion-icon>
-                                <div class="">
-                                    <div class="titulo">Product Design</div>
-                                    <div class="empresa">Google Inc.</div>
-                                </div>
-                            </div>
-                            <p class="Tipo__de_trabalho bg-blue-700 p-[0.3rem] text-white rounded-md">FullTime</p>
-                        </div>
-                        <div>
-                            <span>Photoshop</span>
-                            <span>UI/UX</span>
-                            <span>Canva</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="">
-                    <div class="border-2 border-gray-400 rounded-md p-6">
+                    <div class="shadow-gray-300 shadow-2xl rounded-md p-6">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center">
                                 <ion-icon class="text-4xl bg-gray-400 rounded-full p-2 mr-4" name="logo-google"></ion-icon>

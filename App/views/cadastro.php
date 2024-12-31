@@ -8,7 +8,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body style="background-image: url('./public/assets/images/circles.svg');"  class="bg-no-repeat bg-left-top bg-auto">
+<body style="background-image: url('./public/assets/images/circles.svg');"  class="bg-no-repeat bg-left-center bg-auto">
     <header class="">
         <div class="container py-4">
             <div class="flex justify-between items-center">
@@ -98,8 +98,9 @@
                                     <option value="estudante">Estudante</option>
                                 </select>
                             </div>
-                            <div id="empresa" class="">
-                                <input type="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" name="NIF">
+                            
+                            <div id="empresa" class="hidden">
+                                <input type="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" name="NIF" placeholder="NIF">
                                 <select name="sector" id="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md">
                                     <option value="">Sector</option>
                                     <option value="Finanças">Finanças</option>
@@ -110,16 +111,28 @@
                                 </select>
                             </div>
 
-                            <div class="" id="estudante">
+                            
+                            <div class="hidden" id="estudante">
                                 <div>
                                     <label for="data_nascimento" class="">Data de Nascimento</label>
-                                    <input type="text" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" placeholder="data de nascimento">
+                                    <input type="date" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" placeholder="data de nascimento" name="data_nascimento">
+                                </div>
+                                <div class="">
+                                <?php if($escolas): ?>
+                                    <select name="id_escola" id="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md">
+                                    <?php foreach($escolas as $escola): ?>
+                                        <option value="<?= $escola->id_escola ?>"><?=$escola->nome?></option>
+                                    <?php endforeach ?>
+                                    </select>
+                                <?php endif ?>
                                 </div>
                                 <div class="">
                                     <label class="" for="">Curso</label>
-                                    <input type="text" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" placeholder="curso">
+                                    <input type="text" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" placeholder="curso" name="curso">
                                 </div>
                             </div>
+                           
+
 
                             <label for="password" class="text-blue-950">Palavra-passe</label>
                             <input
@@ -142,6 +155,5 @@
         </section>
     </main>
     <script>
-     
     </script>
 <?php $this->view('partials/footer') ?>

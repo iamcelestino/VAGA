@@ -88,8 +88,8 @@
                             <div class="md:flex gap-8">
                                 <select class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" name="status" id="">
                                     <option value="">Seleciona o estado da vaga</option>
-                                    <option value="activo">activo</option>
-                                    <option value="inactivo">inactivo</option>
+                                    <option value="ativo">activo</option>
+                                    <option value="inativo">inactivo</option>
                                     <option value="preenchido">preenchido</option>
                                 </select>
                                 <select class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" name="tipo_emprego" id="">

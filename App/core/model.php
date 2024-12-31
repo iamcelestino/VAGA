@@ -62,9 +62,9 @@ class Model extends Database
        return $data;
     }
 
-    public function findAll(string $order = 'ASC'): array|object 
+    public function findAll(): array|object 
     {
-        $query = " SELECT * FROM ". $this->table . " ORDER BY " . $order;
+        $query = " SELECT * FROM ". $this->table;
         $data = $this->query($query);
 
         if(is_array($data)) {

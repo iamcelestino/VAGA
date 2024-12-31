@@ -35,23 +35,18 @@ class Empresa extends Model
         return false;
     }
 
+    public function busca_id_usuario(array $dados): array
+    {   
+        $usuario = new Usuario();
 
-public function busca_id_usuario(array $dados): array
-{   
+        $query = "SELECT id_usuario FROM usuarios WHERE tipo_usuario = :tipo ORDER BY id_usuario DESC LIMIT 1";
+        $resultado = $usuario->query($query, ['tipo' => 'empresa'], "array");
 
-    $usuario = new Usuario();
-
-    $query = "SELECT id_usuario FROM usuarios WHERE tipo_usuario = :tipo ORDER BY id_usuario DESC LIMIT 1";
-    $result = $usuario->query($query, ['tipo' => 'empresa'], "array");
-
-    if ($result && isset($result[0]['id_usuario'])) {
-        $dados['id_usuario'] = $result[0]['id_usuario'];
-    } else {
-        throw new \Exception("No 'empresa' user found in the database.");
+        if ($resultado && isset($resultado[0]['id_usuario'])) {
+            $dados['id_usuario'] = $resultado[0]['id_usuario'];
+        } else {
+            throw new \Exception("id_usuario nao encontrado");
+        }
+        return $dados; 
     }
-
-    return $dados; 
-}
-
-
 }

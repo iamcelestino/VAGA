@@ -2,21 +2,23 @@
 function mostraCampoParaEmpresa() {
 
     const tipo_usuario = document.getElementById('tipo_usuario');
-    
+    const empresa = document.getElementById('empresa');
+    const estudante = document.getElementById('estudante');
+
+    empresa.style.display = 'none';
+    estudante.style.display = 'none';
+
     switch(tipo_usuario.value) {
         case "empresa":
-            console.log('empresa');
+            empresa.style.display = 'block';
+            break;
         case "estudante":
-            console.log('estudante');
-        case "escola":
-            console.log('escola');
+            estudante.style.display = 'block';
+            break;
         default:
-            console.log('this is not working');
+            break; 
     }
-
 }
-
-mostraCampoParaEmpresa();
 
 
 

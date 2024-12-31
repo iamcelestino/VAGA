@@ -25,7 +25,7 @@ class Auth
         return false;
     }
 
-    public static function __callStatic($method, $params):mixed
+    public static function __callStatic($method, $params): mixed
     {
         $prop = strtolower(str_replace("get","", $method));
 

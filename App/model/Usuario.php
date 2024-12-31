@@ -22,8 +22,9 @@ class Usuario extends Model
         'hash_password'
     ];
 
-    public function validate(array $data): bool 
-    {   $this->errors = [];
+    public function validar(array $data): bool 
+    {   
+        $this->errors = [];
         
         if(empty($data['nome'])) {
             $this->errors['nome'] = "por favor insira um nome valido";

@@ -42,7 +42,7 @@ class Emprego extends Model
             $this->errors['data_limite'] = "Data limite esta vazio ou formaato invalido";
         }
 
-        $status = ["activo", "inactivo", "preenchido"];
+        $status = ["ativo", "inativo", "preenchido"];
         if(empty($dados_emprego['status']) || !in_array($dados_emprego['status'], $status)) {
 
             $this->errors['status'] = "Status inestente";
