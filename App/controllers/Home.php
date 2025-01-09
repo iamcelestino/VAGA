@@ -7,6 +7,11 @@ class home extends Controller
 {
     public function index() 
     {
-        $this->view('home');
+        $usuario = $this->load_model('Usuario');
+        $usuarios = $usuario->findAll();
+
+        $this->view('home', [
+            'usuarios' => $usuarios
+        ]);
     }
 }

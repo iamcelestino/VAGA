@@ -86,13 +86,23 @@
                                     <input type="" class="hidden" value="<?=$emprego->id_emprego ?>" name="id_emprego">
                                     <button type="submit" class="bg-blue-600 text-white font-bold px-4 p-2 rounded-md">Candidatar-se</button>
                                 </form>
-                                <p class="text-gray-300">publicado: 12 de Novembro</p>
+                                <p class="text-gray-300 text-sm">publicado: 12 de Novembro</p>
                             </div>
                         </div>
                         <div>
                             <span>Photoshop</span>
                             <span>UI/UX</span>
                             <span>Canva</span>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="">
+                            <h1>EMPRESA</h1>
+                            <p class="text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta suscipit, fugit earum atque illo quibusdam ipsum omnis tenetur, reprehenderit iure facilis qui expedita ratione distinctio possimus assumenda totam? Excepturi libero, animi consequatur perferendis optio magni officia soluta. Molestias, at.</p>
+                        </div>
+                        <div class="">
+                        <h1>PAPEL </h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta suscipit, fugit earum atque illo quibusdam ipsum omnis tenetur, reprehenderit iure facilis qui expedita ratione distinctio possimus assumenda totam? Excepturi libero, animi consequatur perferendis optio magni officia soluta. Molestias, at.</p>
                         </div>
                     </div>
                 </div>

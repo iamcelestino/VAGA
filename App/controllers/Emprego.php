@@ -17,7 +17,7 @@ class Emprego extends Controller
         $this->candidatura = new Candidatura();
     }
 
-    public function index() 
+    public function index(): void
     {
         $dados = $this->load_model('Emprego');
         $emprego = $dados->findAll();
@@ -42,7 +42,7 @@ class Emprego extends Controller
         ]);
     }
 
-    public function post_job()
+    public function postar_emprego(): void
     {   
         $erros = [];
        if(count($_POST) > 0) {
@@ -63,6 +63,23 @@ class Emprego extends Controller
             ['empregos' => $_POST]
         );
         
+    }
+
+    public function editar_emprego(int $id = null): void
+    {
+        // $emprego = $this->emprego->where('id', $id);
+        // dd($emprego);
+
+        // if(!$emprego) {
+        //     $this->redirect('emprego');
+        // }
+
+        $this->view('editar_emprego');
+    }
+
+    public function apagar_emprego(int $id = null): void
+    {
+
     }
 
 }

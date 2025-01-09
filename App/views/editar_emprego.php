@@ -12,38 +12,12 @@
                 </div>
             </div>
         </section>
-    
-        <section class="">
-            <div class="container py-16">
-                <div class="">
-                    <h1 class="text-blue-950 font-bold text-xl">Porque postar suas vaga aqui?</h1>
-                    <div class="flex flex-items gap-10">
-                        <div class="">
-                            <ion-icon class="text-3xl  bg-gray-200 rounded-lg p-2 text-blue-500"" name="git-pull-request"></ion-icon>
-                            <h1 class="text-blue-950 font-bold text-md">Encontras os melhores estudantes</h1>
-                            <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique tempore tempora corporis minus, natus, in blanditiis enim quasi asperiores molestias suscipit odio aspernatur explicabo maxime mollitia culpa at iste?</p>
-                        </div>
-                        <div class="">
-                            <ion-icon class="text-3xl bg-gray-200 rounded-lg p-2 text-blue-500"" name="git-pull-request"></ion-icon>
-                            <h1 class="text-blue-950 font-bold text-md">Lorem ipsum dolor sit.</h1>
-                            <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat error iste autem voluptas vel tempora asperiores ea illum, tenetur, officiis at? Velit doloremque saepe amet iste suscipit cupiditate voluptas. Ipsa!
-                            </p>
-                        </div>
-                        <div class="">
-                            <ion-icon class="text-3xl bg-gray-200 rounded-lg p-2  text-blue-500" name="git-pull-request"></ion-icon>
-                            <h1 class="text-blue-950 font-bold text-md">Facil e Rapido</h1>
-                            <p class="text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quo, unde ab, fugiat rerum ipsam veritatis iure, saepe atque enim amet. Commodi sit id praesentium doloribus maiores totam quod adipisci.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="">
             <div class="container py-16">
                 <div>
-                    <h1 class="text-xl font-bold text-blue-950 mb-9">Vamos postar um Emprego</h1>
-                    <form action="" class="border-gray-400 border-2 rounded-md p-8" method="POST">
+                    <h1 class="text-xl font-bold text-blue-950 mb-9">Editar Trabalho</h1>
+                    <form class="border-gray-400 border-2 rounded-md p-8" method="POST">
                         <div>
                             <div class="md:flex gap-8">
                                 <div class="md:flex-1">
@@ -63,7 +37,7 @@
                                     />
                                     </div>
                                 
-                                    <input type="hidden" name="tags" id="tags" />
+                                    <input type="hidden" name="tags" id="tags">
                                     <input type="hidden" name="id_empresa">
                                 </div>
                             </div>
