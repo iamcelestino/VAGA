@@ -12,21 +12,17 @@ class Dashboard extends Controller
 
     public function empresa(): void
     {
-        $emprego = $this->load_model('Emprego');
-        $dados_empregos  = $emprego->findAll();
-
         $this->view('empresa_dashboard', [
-            'empregos' => $dados_empregos
         ]);
     }
 
     public function escola(): void
     {
-
+        $this->view('escola_dashboard');
     }
 
     public function estudante(): void
     {
-
+        $this->view('estudante_dashboard');
     }
 }
