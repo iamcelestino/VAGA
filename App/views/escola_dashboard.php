@@ -1,4 +1,8 @@
-<?php $this->view('partials/header') ?>
+<?php
+use App\Model\Auth;
+$this->view('partials/header')
+?>
+
 <main>
     <section class="">
         <div class="container py-16">
@@ -26,17 +30,32 @@
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Endereço</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Curso</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data de nascimento</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Endorsado</th>
                         </tr>
                     </thead>
+                    <?php if($estudantes):  ?>
+                        <?php foreach($estudantes as $estudante): ?>
                     <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">Engenheiro Informatico</td>
-                                <td class="px-6 py-4 whitespace-nowrap">dddddddddddddddd</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Porto Lobito</td>
-                                <td class="px-6 py-4 whitespace-nowrap">trcelestino@gmal.com</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Freelancer</td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= $estudante->nome ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= $estudante->email ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= $estudante->endereco ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= $estudante->data_nascimento ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= $estudante->curso ?></td>
+                                <td class=" text-center text-2xl">
+                                    <form  method="POST">
+                                        <input name="id_estudante" type="text" id="" class="hidden" value="<?= $estudante->id_estudante?>">
+                                        <input name="id_escola" type="text" id="" class="hidden" value="<?= Auth::getId_usuario() ?>">
+                                        <button class="bg-green-600" type="submit">
+                                            <ion-icon  name="checkmark">endorsar</ion-icon>
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                     </tbody>
+                        <?php endforeach ?>
+                    <?php else: ?>
+                    <?php endif ?>
                 </table>
             </div>
         </div>
