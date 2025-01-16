@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div class="flex justify-center">
-                            <button type="submit" class="bg-blue-500 py-2 px-[2rem] text-white font-bold rounded-md">Editar Candidatura</button>
+                            <button type="submit" class="bg-blue-500 py-2 px-[2rem] text-white font-bold rounded-md">Deletar Emprego</button>
                         </div>
                     </form>
                 </div>

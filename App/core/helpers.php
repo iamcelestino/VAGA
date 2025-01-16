@@ -9,7 +9,7 @@ function dd(mixed $data): void
     echo "</pre>";
 }
 
-function get_var(mixed $key, string $defaut = ''): string  
+function buscar_var(mixed $key, string $default = ''): string  
 {
 
     if(isset($_POST[$key])) {
@@ -17,10 +17,11 @@ function get_var(mixed $key, string $defaut = ''): string
         return $_POST[$key];
 
     }
-    return $defaut;
+    return $default;
 }
 
-function get_selected(string $key, mixed $value): string {
+function buscar_selecionado(string $key, mixed $value)
+{
     
     if(isset($_POST[$key])) {
 

@@ -24,20 +24,24 @@ class Dashboard extends Controller
 
     public function empresa(): void
     {
-        $this->view('empresa_dashboard', [
-        ]);
+        $this->view('empresa_dashboard');
     }
 
     public function escola(): void
     {
-
+        $erros = [];
         $estudantes = $this->database->query('SELECT a.nome, a.email, a.endereco, b.* 
                                             FROM usuarios as a 
                                             INNER JOIN estudantes as b on a.id_usuario = b.id_usuario');
 
         if(count($_POST) > 0) {
-            $this->endorsamento->insert($_POST);
-            $this->redirect('home');
+            
+            if($this->endorsamento->validar($_POST)) {
+                $this->endorsamento->insert($_POST);
+            }else {
+                $erros = $this->endorsamento->errors;
+                dd($erros);
+            }
         }
 
         $this->view('escola_dashboard', [

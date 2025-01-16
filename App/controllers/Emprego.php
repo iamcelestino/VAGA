@@ -5,7 +5,6 @@ use App\Core\Controller;
 use App\Model\Auth;
 use App\Model\{Emprego as modeloEmprego, Candidatura};
 
-
 class Emprego extends Controller
 {   
     protected mixed $emprego;
@@ -21,7 +20,6 @@ class Emprego extends Controller
     {
         $dados = $this->load_model('Emprego');
         $emprego = $dados->findAll();
-
 
         //CANDIDATAR-SE PARA UMA VAGA DE EMPREGO
         if(count($_POST) > 0) {
@@ -67,19 +65,55 @@ class Emprego extends Controller
 
     public function editar_emprego(int $id = null): void
     {
-        // $emprego = $this->emprego->where('id', $id);
-        // dd($emprego);
 
-        // if(!$emprego) {
-        //     $this->redirect('emprego');
-        // }
+        $id_emprego = $id;
 
-        $this->view('editar_emprego');
+        $emprego = $this->emprego->where('id_emprego', $id_emprego);
+
+        if(!$emprego) {
+            $this->redirect('empregos');
+        }
+
+        if(count($_POST) > 0) {
+
+            if($this->emprego->validar($_POST)){
+               $this->emprego->update($id_emprego, $_POST);
+               $this->redirect('emprego');
+            }else {
+                $erros = $this->emprego->errors;
+            }
+        }
+
+
+        $this->view('editar_emprego', [
+            'emprego'=> $emprego[0]
+        ]);
     }
 
-    public function apagar_emprego(int $id = null): void
+    public function deletar_emprego(int $id = null): void
     {
+        
+        $id_emprego = $id;
 
+        $emprego = $this->emprego->where('id_emprego', $id_emprego);
+
+        if(!$emprego) {
+            $this->redirect('empregos');
+        }
+
+        if(count($_POST) > 0) {
+
+            if($this->emprego->validar($_POST)){
+               $this->emprego->delete($id_emprego, $_POST);
+               $this->redirect('emprego');
+            }else {
+                $erros = $this->emprego->errors;
+            }
+        }
+
+        $this->view('deletar_emprego', [
+            'emprego'=> $emprego[0]
+        ]);
     }
 
 }

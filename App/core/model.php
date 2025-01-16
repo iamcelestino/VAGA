@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace App\Core;
 use App\Core\Database;
-
+use PDO;
+use Exception;
 class Model extends Database
 {
     protected mixed $table;
@@ -27,14 +28,14 @@ class Model extends Database
            'value' => $value 
         ]);
 
-        if(is_array($data)) {
+        // if(is_array($data)) {
 
-            if(property_exists($this, 'after_select')) {
-                foreach($this->after_select as $function) {
-                    $data = $this->$function($data);
-                }
-            }
-        }
+        //     if(property_exists($this, 'after_select')) {
+        //         foreach($this->after_select as $function) {
+        //             $data = $this->$function($data);
+        //         }
+        //     }
+        // }
         return $data;
     }
 
@@ -82,7 +83,7 @@ class Model extends Database
 
     public function insert(array $data): bool 
     {
-        if(property_exists($this , 'allowed_columns')) {
+        if(property_exists($this, 'allowed_columns')) {
 
             foreach($data as $key => $columns) {
 
@@ -111,41 +112,57 @@ class Model extends Database
 
     public function update(mixed $id, array $data): mixed 
     {
-        if(property_exists($this, 'allowed_columns')) {
-            
-            foreach($data as $key => $columns) {
-
-                if(!in_array($key, $this->allowed_columns)) {
+        if (property_exists($this, 'allowed_columns')) {
+            foreach ($data as $key => $columns) {
+                if (!in_array($key, $this->allowed_columns)) {
                     unset($data[$key]);
                 }
             }
         }
 
-        if(property_exists($this, 'before_insert')) {
-            
-            foreach($this->before_insert as $funtion) {
-
-                $data = $this->$funtion($data);
+        if (property_exists($this, 'before_insert')) {
+            foreach ($this->before_insert as $function) {
+                $data = $this->$function($data);
             }
         }
 
         $string = '';
-        foreach($data as $key => $value) {
-            $string .= "$key = : $key, ";
+        foreach ($data as $key => $value) {
+            $string .= "$key = :$key, ";
         }
 
         $strg = rtrim($string, ", ");
-        $data['id'] = $id;
+        $primary_key = $this->get_primary_key();
+        $data[$primary_key] = $id;
 
-        $query = "UPDATE $this->table SET $strg WHERE id = :id";
+        $query = "UPDATE $this->table SET $strg WHERE $primary_key = :$primary_key";
         return $this->query($query, $data);
-        
     }
 
-    public function delete(mixed $id) 
+    public function get_primary_key(): string
     {
-        $query = "SELECT FROM $this->table WHERE id = :id";
-        $data['id'] = $id;
+        static $primary_keys = [];
+
+        if (!isset($primary_keys[$this->table])) {
+            $query = "SHOW KEYS FROM {$this->table} WHERE Key_name = 'PRIMARY'";
+            $result = $this->query($query, [], 'array'); 
+
+            if (!empty($result)) {
+                $primary_keys[$this->table] = $result[0]['Column_name'];
+            } else {
+                throw new Exception("Primary key not found for table {$this->table}");
+            }
+        }
+
+        return $primary_keys[$this->table];
+    }
+
+    public function delete(mixed $id): mixed
+    {
+        $primary_key = $this->get_primary_key(); 
+
+        $query = "DELETE FROM $this->table WHERE $primary_key = :$primary_key";
+        $data[$primary_key] = $id;
         return $this->query($query, $data);
     }
 }

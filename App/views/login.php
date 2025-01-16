@@ -55,7 +55,7 @@
                                 type="email"
                                 name="email"
                                 id="email"
-                                value="<?= get_var('email') ?>"
+                                value="<?= buscar_var('email') ?>"
                                 placeholder="Email Address"
                             >
 
@@ -65,7 +65,7 @@
                                 type="password"
                                 name="password"
                                 id="password"
-                                value="<?=get_var('password') ?>"
+                                value="<?=buscar_var('password') ?>"
                                 placeholder="Password"
                             >
                             <p class="text-gray-400 my-2 text-center">

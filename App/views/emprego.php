@@ -16,7 +16,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section class="area__de_trabalho">
             <div class="container py-9">
                 <h2 class="font-bold text-xl text-blue-950 mb-9">Areas de Trabalho</h2>
@@ -96,13 +96,18 @@
                         </div>
                     </div>
                     <div class="">
-                        <div class="">
-                            <h1>EMPRESA</h1>
-                            <p class="text-slate-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta suscipit, fugit earum atque illo quibusdam ipsum omnis tenetur, reprehenderit iure facilis qui expedita ratione distinctio possimus assumenda totam? Excepturi libero, animi consequatur perferendis optio magni officia soluta. Molestias, at.</p>
+                        <div class="mt-8">
+                            <div class="">
+                                <h1 class="text-blue-500 font-bold">EMPRESA</h1>
+                                <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta suscipit, fugit earum atque illo quibusdam ipsum omnis tenetur, reprehenderit iure facilis qui expedita ratione distinctio possimus assumenda totam? Excepturi libero, animi consequatur perferendis optio magni officia soluta. Molestias, at.</p>
+                            </div>
+                            <div class="">
+                            <h1 class="text-blue-500 font-bold">PAPEL </h1>
+                            <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta suscipit, fugit earum atque illo quibusdam ipsum omnis tenetur, reprehenderit iure facilis qui expedita ratione distinctio possimus assumenda totam? Excepturi libero, animi consequatur perferendis optio magni officia soluta. Molestias, at.</p>
+                            </div>
                         </div>
                         <div class="">
-                        <h1>PAPEL </h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta suscipit, fugit earum atque illo quibusdam ipsum omnis tenetur, reprehenderit iure facilis qui expedita ratione distinctio possimus assumenda totam? Excepturi libero, animi consequatur perferendis optio magni officia soluta. Molestias, at.</p>
+                            <h1></h1>
                         </div>
                     </div>
                 </div>
@@ -112,7 +117,6 @@
                 <?php endif ?>
             </div>
         </section>
-
 
         <section >
             <div  style="background-image: url('./public/assets/images/wave.svg');"  class="bg-no-repeat bg-center bg-cover min-h-full pb-52 pt-16">

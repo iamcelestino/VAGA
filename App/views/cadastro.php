@@ -66,7 +66,7 @@
                                 type="text"
                                 name="nome"
                                 id="nome"
-                                value="<?=get_var('nome')?>"
+                                value="<?=buscar_var('nome')?>"
                                 placeholder="Nome"
                             >
 
@@ -76,7 +76,7 @@
                                 type="text"
                                 name="email"
                                 id="Email address"
-                                value="<?=get_var('email')?>"
+                                value="<?=buscar_var('email')?>"
                                 placeholder="Email address"
                             >
                     
@@ -86,7 +86,7 @@
                                 type="text"
                                 name="endereco"
                                 id="endereco"
-                                value="<?=get_var('endereco')?>"
+                                value="<?=buscar_var('endereco')?>"
                                 placeholder="Endereco"
                             >
                             <div class="">
@@ -140,7 +140,7 @@
                                 type="text"
                                 name="password"
                                 id="password"
-                                value="<?=get_var('password')?>"
+                                value="<?=buscar_var('password')?>"
                                 placeholder="Password"
                             >
                             <p class="text-gray-400 my-2 text-center">
