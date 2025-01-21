@@ -40,6 +40,24 @@ class Emprego extends Controller
         ]);
     }
 
+    public function sector(mixed $sector): void
+    {
+        $emprego = $this->load_model('Emprego');
+        $empregos = $emprego->findAll();
+
+        $sector = basename(urldecode($_SERVER['REQUEST_URI']));
+
+        $dados_emprego = array_filter($empregos, function($item) use ($sector) {
+            return isset($item->usuario->sector) && $item->usuario->sector === $sector;
+        });
+
+        dd($dados_emprego);
+
+        $this->view('sector_emprego', [
+            'empregos'=> $dados_emprego
+        ]);
+    }
+
     public function postar_emprego(): void
     {   
         $erros = [];
@@ -83,8 +101,7 @@ class Emprego extends Controller
                 $erros = $this->emprego->errors;
             }
         }
-
-
+        
         $this->view('editar_emprego', [
             'emprego'=> $emprego[0]
         ]);

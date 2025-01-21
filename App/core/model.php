@@ -28,21 +28,21 @@ class Model extends Database
            'value' => $value 
         ]);
 
-        // if(is_array($data)) {
+        if(is_array($data)) {
 
-        //     if(property_exists($this, 'after_select')) {
-        //         foreach($this->after_select as $function) {
-        //             $data = $this->$function($data);
-        //         }
-        //     }
-        // }
+            if(property_exists($this, 'after_select')) {
+                foreach($this->after_select as $function) {
+                    $data = $this->$function($data);
+                }
+            }
+        }
         return $data;
     }
 
     public function first(string $column, mixed $value): array|object 
     {
        $column = addslashes($column);
-       $query = "SELECT * FROM " . $this->table . "WHERE " . $column . "= :value";
+       $query = "SELECT * FROM " . $this->table . " WHERE " . $column . " = :value";
        $data = $this->query($query, [
             'value' => $value
        ]); 

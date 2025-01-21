@@ -21,6 +21,11 @@ class Emprego extends Model
     
     ];
 
+    protected array $after_select = [
+        'busca_usuario',
+        'busca_empresa'
+    ];
+
     public function validar(array $dados_emprego): bool
     {   
         $this->errors = [];
@@ -59,6 +64,27 @@ class Emprego extends Model
         }
 
         return false;
+    }
+
+    public function busca_usuario(array $dados): mixed
+    {
+        $usuario = new Usuario();
+        foreach($dados as $chave => $coluna) {
+            $resultado = $usuario->where('id_usuario', $coluna->id_empresa);
+            $dados[$chave]->usuario = is_array($resultado) ? $resultado[0] : false;
+        }
+        return $dados;
+    }
+
+    public function busca_empresa(array $dados): mixed 
+    {
+        $empresa = new Empresa();
+
+        foreach($dados as $chave => $coluna) {
+            $resultado = $empresa->where('id_usuario', $coluna->id_empresa);
+            $dados[$chave]->usuario = is_array($resultado) ? $resultado[0] : false;
+        }
+        return $dados;
     }
 
 }

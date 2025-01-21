@@ -15,6 +15,11 @@ class Estudante extends Model
     protected array $before_insert = [
         'busca_id_usuario'
     ];
+
+    protected array $after_select = [
+        'busca_usuario'
+    ];
+
     
     public function validar(array $dados_estudante): bool
     {
@@ -54,5 +59,15 @@ class Estudante extends Model
             throw new \Exception("id_usuario nao encontrado");
         }
         return $dados; 
+    }
+
+    public function busca_usuario(array $dados): mixed
+    {
+        $usuario = new Usuario();
+        foreach($dados as $chave => $coluna) {
+            $resultado = $usuario->where('id_usuario', $coluna->id_usuario);
+            $dados[$chave]->usuario = is_array($resultado) ? $resultado[0] : false;
+        }
+        return $dados;
     }
 }

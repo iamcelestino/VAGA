@@ -16,51 +16,7 @@
                 </div>
             </div>
         </section>
-        
-        <section class="area__de_trabalho">
-            <div class="container py-9">
-                <h2 class="font-bold text-xl text-blue-950 mb-9">Areas de Trabalho</h2>
-                <div class="sm:grid sm:grid-cols-3 md:grid-cols-5 gap-10">
-                        
-                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md hover:bg-blue-500 hover:scale-105 ease-out duration-300">
-                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
-                                <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
-                                 Tecnologia
-                            </a>
-                        </li>
-           
-                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md hover:bg-blue-500 hover:scale-105 ease-out duration-300">
-                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
-                                <ion-icon class="block text-7xl text-gray-400" name="medkit-outline"></ion-icon>
-                                Saude
-                            </a>
-                        </li>
-
-                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
-                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
-                                <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
-                                Educacao
-                            </a>
-                        </li>
-
-                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
-                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
-                                <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
-                                Financas
-                            </a>
-                        </li>
-                        
-                        <li class="list-none bg-gray-100 mb-4 p-8 rounded-md  hover:bg-blue-500 hover:scale-105 ease-out duration-300">
-                            <a href="" class="flex flex-col items-center text-blue-950 font-bold">
-                                <ion-icon class="block text-7xl text-gray-400" name="code-outline"></ion-icon>
-                                Outras areas
-                            </a>
-                        </li>
-                </div>
-            </div>
-        </section>
-        
-                
+ 
         <section>
             <div class="container py-9">
                 <div class="flex justify-between">
@@ -78,7 +34,7 @@
                                 <ion-icon class="text-4xl bg-gray-400 rounded-full p-2 mr-4" name="logo-google"></ion-icon>
                                 <div class="">
                                     <p class="font-bold"><?= $emprego->titulo?></p>
-                                    <p class="text-gray-300"><?=$emprego->usuario->nome?></p>
+                                    <p class="text-gray-300">Google Inc.</p>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center justify-center">
@@ -86,7 +42,7 @@
                                     <input type="" class="hidden" value="<?=$emprego->id_emprego ?>" name="id_emprego">
                                     <button type="submit" class="bg-blue-600 text-white font-bold px-4 p-2 rounded-md">Candidatar-se</button>
                                 </form>
-                                <p class="text-gray-300 text-xs"><?=$emprego->criado_em ?></p>
+                                <p class="text-gray-300 text-sm">publicado: 12 de Novembro</p>
                             </div>
                         </div>
                         <div>
@@ -98,10 +54,8 @@
                     <div class="">
                         <div class="mt-8">
                             <div class="">
-                                <h1 class="text-blue-500 font-bold">SOBRE A EMPRESA</h1>
-                                <div>
-                            
-                                </div>
+                                <h1 class="text-blue-500 font-bold">EMPRESA</h1>
+                                <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta suscipit, fugit earum atque illo quibusdam ipsum omnis tenetur, reprehenderit iure facilis qui expedita ratione distinctio possimus assumenda totam? Excepturi libero, animi consequatur perferendis optio magni officia soluta. Molestias, at.</p>
                             </div>
                             <div class="">
                             <h1 class="text-blue-500 font-bold">PAPEL </h1>

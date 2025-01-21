@@ -41,4 +41,16 @@ class Escola extends Model
         }
         return $dados; 
     }
+
+
+    public function busca_usuario(array $dados): mixed
+    {
+        $usuario = new Usuario();
+        foreach($dados as $chave => $coluna) {
+            $resultado = $usuario->where('id_usuario', $coluna->id_usuario);
+            $dados[$chave]->usuario = is_array($resultado) ? $resultado[0] : false;
+        }
+        return $dados;
+    }
+  
 }

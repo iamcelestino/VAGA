@@ -2,13 +2,17 @@
 
 namespace App\Controllers;
 use App\Core\Controller;
-use App\core\Database;
 
 class Perfil extends Controller
 {
     public function index(int $id = null): void
     {   
+        $usuario = $this->load_model('Empresa');
+        $dados_usuario = $usuario->first('id_usuario', $id);
         
-        $this->view('perfil', []);
+        dd($dados_usuario);
+        $this->view('perfil', [
+            'usuario' => $dados_usuario
+        ]);
     }
 }

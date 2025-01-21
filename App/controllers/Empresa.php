@@ -3,23 +3,36 @@
 namespace App\Controllers;
 use App\Core\Controller;
 use App\Core\Database;
+use App\Model\Emprego;
 
 class Empresa extends Controller
 {
     public mixed $database;
+    public mixed $emprego;
 
     public function __construct()
     {
         $this->database = new Database();
+        $this->emprego = new Emprego();
     }
 
     public function index(): void
     {
-        $dados_empresa = $this->database->query('SELECT a.nome, a.email, a.endereco, b.NIF, b.sector
-                                                FROM usuarios as a 
-                                                INNER join empresas  as b ON a.id_usuario = b.id_usuario');
+        $empresa = $this->load_model('Empresa');
+        $dados_empresa = $empresa->findAll();
+
         $this->view('empresas', [
             'empresas' => $dados_empresa
         ]);
     }
+
+    public function empregos(int $id = null): void
+    {
+        $empregos = $this->emprego->where('id_empresa', $id);
+
+        $this->view('empresa_emprego', [
+            'empregos' => $empregos
+        ]);
+    }
+
 }

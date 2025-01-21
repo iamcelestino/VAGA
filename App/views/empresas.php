@@ -27,11 +27,11 @@
                         <div class="flex items-center gap-4">
                             <ion-icon class="text-3xl bg-gray-200 p-2 rounded-md" name="logo-youtube"></ion-icon>
                             <div class="">
-                                <p class=""><?= $empresa->nome ?></p>
-                                <a class="" href=""><?= $empresa->endereco ?></a>
+                                <p class=""><?= $empresa->usuario->nome ?></p>
+                                <a class="" href=""><?= $empresa->usuario->endereco ?></a>
                             </div>
                         </div>
-                        <a class="bg-blue-500 font-medium text-white text-center py-2 px-8 inline-block mt-8 w-full rounded-md" href=""><span>3</span> Trabalhos abertos</a>
+                        <a class="bg-blue-500 font-medium text-white text-center py-2 px-8 inline-block mt-8 w-full rounded-md" href="<?=BASE_URL?>empresa/empregos/<?=$empresa->id_usuario?>"><span></span> Trabalhos abertos</a>
                     </div>
                         <?php endforeach ?>
                     <?php else:  ?>

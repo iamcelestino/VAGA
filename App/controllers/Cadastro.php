@@ -87,6 +87,7 @@ class Cadastro extends Controller
             'curso' => $dados['curso'] ?? null,
         ];
         $this->estudante->insert($dados_estudante);
+        $this->redirect('login');
     } 
     
     public function cadastra_escola(array $dados): void
@@ -99,5 +100,6 @@ class Cadastro extends Controller
         ];
 
         $this->escola->insert($dados_escola);
+        $this->redirect('login');
     }
 }

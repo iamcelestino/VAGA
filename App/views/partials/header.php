@@ -1,3 +1,7 @@
+<?php
+
+use App\Model\Auth;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,14 +35,14 @@
                         </a>
                     </div>
                     <div class="hidden group-hover:block absolute bg-gray-100 min-w-[100px] shadow-lg z-10">
-                        <a class="float-none text-black px-4 py-3 no-underline block text-left"  href="<?= BASE_URL ?>perfil/">Perfil</a>
+                        <a class="float-none text-black px-4 py-3 no-underline block text-left"  href="<?= BASE_URL ?>perfil/<?= Auth::getId_usuario()?>">Perfil</a>
                         <a class="float-none text-black px-4 py-3 no-underline block text-left"  href="<?=  BASE_URL ?>dashboard">Dashboard</a>
                         <a class="float-none text-black px-4 py-3 no-underline block text-left"  href="<?= BASE_URL ?>logout">Logout</a>
                     </div>
                 </li>
                     <li class="list-none hidden sm:inline-block ml-4"><a href="<?= BASE_URL ?>login">login</a></li>
                     <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="<?= BASE_URL ?>cadastro">Sign up</a></li>
-                    <li class="list-none bg-blue-600 inline-block px-[1.2rem] py-[0.4rem] rounded-md font-medium text-white"><a href="<?= BASE_URL ?>emprego/postar_emprego">Post Job</a></li>
+                    <li class="list-none bg-blue-600 inline-block px-[1.2rem] py-[0.4rem] rounded-md font-medium text-white"><a href="<?= BASE_URL ?>emprego/postar_emprego">Postar Emprego</a></li>
                     <div class="flex flex-col ml-4 md:hidden">
                         <span class="bg-slate-400 py-[3px] mb-[0.2rem] w-8 rounded-md"></span>
                         <span class="bg-slate-400 py-[3px] mb-[0.2rem]  w-8 rounded-md"></span>

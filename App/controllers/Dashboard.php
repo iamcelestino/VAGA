@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 use App\Core\{Controller, Database};
-use App\Model\{Usuario, Endorsamento};
+use App\Model\{Auth, Usuario, Endorsamento};
 
 class Dashboard extends Controller
 {
@@ -19,7 +19,9 @@ class Dashboard extends Controller
     
     public function index(): void
     {
+        $tipo_usuario = $_SESSION['USUARIO']->tipo_usuario;
 
+        
     }
 
     public function empresa(): void
