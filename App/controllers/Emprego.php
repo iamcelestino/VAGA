@@ -2,8 +2,7 @@
 
 namespace App\Controllers;
 use App\Core\Controller;
-use App\Model\Auth;
-use App\Model\{Emprego as modeloEmprego, Candidatura};
+use App\Model\{Emprego as modeloEmprego, Candidatura, Auth};
 
 class Emprego extends Controller
 {   
@@ -50,8 +49,6 @@ class Emprego extends Controller
         $dados_emprego = array_filter($empregos, function($item) use ($sector) {
             return isset($item->usuario->sector) && $item->usuario->sector === $sector;
         });
-
-        dd($dados_emprego);
 
         $this->view('sector_emprego', [
             'empregos'=> $dados_emprego

@@ -71,7 +71,7 @@
                 </div>
                 <?php endforeach ?>
                 <?php else:?>
-                    <h1>NAO HA EMPREGOS DISPONIVEIS</h1>
+                    <h1>NAO HA EMPREGOS DISPONIVEIS DESTE SECTOR DIPONIVEL</h1>
                 <?php endif ?>
             </div>
         </section>

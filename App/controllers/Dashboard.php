@@ -20,7 +20,6 @@ class Dashboard extends Controller
     public function index(): void
     {
         $tipo_usuario = $_SESSION['USUARIO']->tipo_usuario;
-
         
     }
 

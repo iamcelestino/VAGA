@@ -6,6 +6,7 @@ namespace App\Core;
 use App\Core\Database;
 use PDO;
 use Exception;
+
 class Model extends Database
 {
     protected mixed $table;

@@ -9,10 +9,15 @@ class Perfil extends Controller
     {   
         $usuario = $this->load_model('Empresa');
         $dados_usuario = $usuario->first('id_usuario', $id);
-        
-        dd($dados_usuario);
+
         $this->view('perfil', [
             'usuario' => $dados_usuario
         ]);
+    }
+
+    public function editar(int $id = null): void
+    {
+
+        $this->view('editar_perfil');
     }
 }

@@ -7,7 +7,7 @@ use App\Core\Model;
 
 class Usuario extends Model
 {
-    
+
     protected array $allowed_columns = [
         'id_usuario',
         'nome',
@@ -58,6 +58,7 @@ class Usuario extends Model
         $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
         return $data;
     }
+
 
 }
 

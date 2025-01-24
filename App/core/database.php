@@ -8,6 +8,10 @@ use PDO;
 use PDOException;
 
 class Database {
+
+    protected array $allowed_columns = [];
+    protected array $before_insert = [];
+    protected array $after_select = [];
     
     private PDO $pdo;
     private string $dsn = "mysql:host=" . HOST . ";dbname=" . DB_NAME . ";charset=utf8";

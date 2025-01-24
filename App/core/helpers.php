@@ -9,6 +9,13 @@ function dd(mixed $data): void
     echo "</pre>";
 }
 
+
+function escape(mixed $var) {
+
+    return htmlspecialchars($var);
+    
+}
+
 function buscar_var(mixed $key, string $default = ''): string  
 {
 
