@@ -25,7 +25,7 @@ use App\Model\Auth;
                     <li class="list-none"><a href="<?= BASE_URL ?>">Home</a></li>
                     <li class="list-none ml-4"><a href="<?= BASE_URL ?>emprego">Procurar Emprego</a></li>
                     <li class="list-none ml-4"><a href="<?= BASE_URL ?>empresa">Empresas</a></li>
-                    <li class="list-none ml-4"><a href="">Estudantes</a></li>
+                    <li class="list-none ml-4"><a href="<?=BASE_URL?>estudante">Estudantes</a></li>
                 </nav>
                 <div class="flex items-center">
                 <li class="group relative  ml-4 list-none">
