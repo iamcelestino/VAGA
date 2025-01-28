@@ -12,6 +12,9 @@ function dd(mixed $data): void
 
 function escape(mixed $var) {
 
+    if($var == null) {
+        return '';
+    }
     return htmlspecialchars($var);
     
 }

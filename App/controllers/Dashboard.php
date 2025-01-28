@@ -24,8 +24,14 @@ class Dashboard extends Controller
     }
 
     public function empresa(): void
-    {
-        $this->view('empresa_dashboard');
+    {  
+        $candidatura = $this->load_model('Candidatura');
+        $dados_candidatura = $candidatura->findAll();
+        dd($dados_candidatura);
+
+        $this->view('empresa_dashboard', [
+            'candidaturas' => $dados_candidatura
+        ]);
     }
 
     public function escola(): void
@@ -51,7 +57,9 @@ class Dashboard extends Controller
     }
 
     public function estudante(): void
-    {
+    {    $candidatura = $this->load_model('Candidatura');
+        $dados_candidatura = $candidatura->findAll();
+        dd($dados_candidatura);
         $this->view('estudante_dashboard');
     }
 }

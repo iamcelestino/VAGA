@@ -4,13 +4,13 @@
         <div class="container py-16">
             <div class="sm:flex items-center justify-round gap-10 mt-4 border-2 border-gray-200 p-2">
                 <div class="flex-1 bg-gray-200 p-8 mb-2 md:mb-0 hover:bg-[#3F3D56] hover:text-white  rounded-md">
-                    <a href="" class="">
+                    <a href="<?=BASE_URL?>/emprego" class="">
                         <h3 class="font-bold text-3xl"> </h3>
                         <P class="font-bold text-2xl">Novos Empregos</P>
                     </a>
                 </div>
                 <div class="flex-1 bg-gray-200 p-8 mb-2 md:mb-0 hover:bg-[#3F3D56] hover:text-white  rounded-md">
-                    <a href="" class="">
+                    <a href="<?=BASE_URL?>empresa" class="">
                         <h3 class="font-bold text-3xl"></h3>
                         <p class="font-bold text-2xl">Empresas</p>
                     </a>

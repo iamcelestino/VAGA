@@ -20,6 +20,8 @@ class Emprego extends Controller
         $dados = $this->load_model('Emprego');
         $emprego = $dados->findAll();
 
+        dd($emprego);
+
         //CANDIDATAR-SE PARA UMA VAGA DE EMPREGO
         if(count($_POST) > 0) {
 

@@ -26,24 +26,39 @@
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-200">
                         <tr>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Titulo</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descricao</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Empresa</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estudante</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">titulo da vaga</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">tipo de emprego</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Qualificacao</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feedback</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Accoes</th>
                         </tr>
                     </thead>
+                    <?php if($candidaturas): ?>
+                        <?php foreach($candidaturas as $candidatura): ?>
                     <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">Engenheiro Informatico</td>
-                                <td class="px-6 py-4 whitespace-nowrap">dddddddddddddddd</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Porto Lobito</td>
-                                <td class="px-6 py-4 whitespace-nowrap">trcelestino@gmal.com</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Freelancer</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Contratado</td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_estudante->usuario->nome) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_estudante->usuario->email) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->titulo) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->tipo_emprego) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->qualificacao) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->feedback) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <form action="">
+                                        <select name="" id="">
+                                            <option value="">Aceite</option>
+                                            <option value="">Recusado</option>
+                                        </select>
+                                    </form>
+                                </td>
                             </tr>
                     </tbody>
+                        <?php endforeach?>
+                    <?php else: ?>
+                        <h1>Nenhuma candidatura Apresentada</h1>
+                    <?php endif ?>
                 </table>
             </div>
         </div>
