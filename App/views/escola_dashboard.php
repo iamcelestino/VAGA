@@ -44,8 +44,8 @@ $this->view('partials/header');
                                 <td class="px-6 py-4 whitespace-nowrap"><?= $estudante->curso ?></td>
                                 <td class=" text-center text-2xl">
                                     <form  method="POST">
-                                        <input name="id_estudante" type="text" value="<?= $estudante->id_estudante?>">
-                                        <input name="id_escola" type="text"  value="<?= Auth::getId_usuario() ?>">
+                                        <input class="hidden" name="id_estudante" type="text" value="<?= $estudante->id_estudante?>">
+                                        <input class="hidden" name="id_escola" type="text"  value="<?= Auth::getId_usuario() ?>">
                                         <button class="" type="submit">
                                             <ion-icon  name="checkmark">endorsar</ion-icon>
                                         </button>

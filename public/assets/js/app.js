@@ -1,6 +1,6 @@
 
 function mostraCampoParaEmpresa() {
-
+    
     const tipo_usuario = document.getElementById('tipo_usuario');
     const empresa = document.getElementById('empresa');
     const estudante = document.getElementById('estudante');

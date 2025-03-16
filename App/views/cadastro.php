@@ -44,7 +44,7 @@
                         <img src="<?= ASSETS_URL ?>/images/fingerprint-94.svg" alt="">
                     </div>
                     <div class="bg-gray-100 p-4 sm:p-12 rounded-md">
-                        <form action="" method="POST">
+                        <form action="" method="POST" enctype="multipart/form-data">
                             <div class="">
                                 <div class="flex items-center justify-between">
                                     <div>
@@ -52,10 +52,6 @@
                                         conta agora mesmo
                                         </h1>
                                         <p class="text-gray-400 my-4">TRABALHE MELHOR, VIVA MELHOR</p>
-                                    </div>
-                                    <div class="flex flex-col items-center">
-                                        <ion-icon class="text-7xl" name="image-outline"></ion-icon>
-                                        company logo
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +65,6 @@
                                 value="<?=buscar_var('nome')?>"
                                 placeholder="Nome"
                             >
-
                             <label for="Email address" class="text-blue-950">Email Address</label>
                             <input
                                 class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
@@ -89,6 +84,8 @@
                                 value="<?=buscar_var('endereco')?>"
                                 placeholder="Endereco"
                             >
+
+                            <input type="file" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" name="imagem">
                             <div class="">
                                 <select name="tipo_usuario" id="tipo_usuario" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" onchange="
                                 mostraCampoParaEmpresa()">

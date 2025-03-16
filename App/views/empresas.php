@@ -1,4 +1,8 @@
-<?php $this->view('partials/header') ?>
+<?php
+
+use App\Model\Imagem;
+
+ $this->view('partials/header') ?>
     <main>
         <section class="bg-gray-100">
             <div class="container py-9">
@@ -25,13 +29,16 @@
                         <?php foreach($empresas as $empresa): ?>
                     <div class="shadow-gray-400 shadow-2xl p-4 rounded-md flex-1">
                         <div class="flex items-center gap-4">
-                            <ion-icon class="text-3xl bg-gray-200 p-2 rounded-md" name="logo-youtube"></ion-icon>
+                            <img src="<?=ASSETS_URL?>/<?=$empresa->usuario->imagem?> " alt="">
                             <div class="">
                                 <p class=""><?= $empresa->usuario->nome ?></p>
                                 <a class="" href=""><?= $empresa->usuario->endereco ?></a>
                             </div>
                         </div>
-                        <a class="bg-blue-500 font-medium text-white text-center py-2 px-8 inline-block mt-8 w-full rounded-md" href="<?=BASE_URL?>empresa/empregos/<?=$empresa->id_usuario?>"><span></span> Trabalhos abertos</a>
+                        <div class="">
+                            <a class="bg-blue-500 font-medium text-white text-center py-2 px-8 inline-block mt-8 w-full rounded-md" href="<?=BASE_URL?>empresa/empregos/<?=$empresa->id_usuario?>"><span></span>Todos empregos</a>
+                            <a class="bg-blue-500 font-medium text-white text-center py-2 px-8 inline-block mt-4 w-full rounded-md" href="<?=BASE_URL?>empresa/emprego_activo/<?=$empresa->id_usuario?>"><span></span>Empregos Abertos</a>
+                        </div>
                     </div>
                         <?php endforeach ?>
                     <?php else:  ?>

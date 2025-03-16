@@ -17,16 +17,23 @@ class Cadastro extends Controller
     {
         $this->usuario = new Usuario();
         $this->empresa = new Empresa();
-        $this->escola = new Escola();
+        $this->escola =  new Escola();
         $this->estudante = new Estudante();
-        $this->database = new Database();
+        $this->database =  new Database();
     }
 
     public function index()
     {   
 
-        if (count($_POST) > 0) {
+        if (count($_POST) > 0) {    
+           
+            if(count($_FILES) > 0) {
+                
+                $imagem = carregar_ficheiro($_FILES);
 
+                $_POST['imagem'] = $imagem['imagem'] ?? null;
+            }
+    
             if($this->usuario->validar($_POST)) {
                 $this->usuario->insert($_POST);
             }

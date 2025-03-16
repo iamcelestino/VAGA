@@ -14,8 +14,9 @@ class Usuario extends Model
         'email',
         'endereco',
         'tipo_usuario',
+        'imagem',
         'password',
-        'criado_em',
+        'criado_em'
     ];
     
     protected array $before_insert = [

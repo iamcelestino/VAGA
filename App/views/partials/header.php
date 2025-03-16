@@ -1,9 +1,8 @@
 <?php
-
 use App\Model\Auth;
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +35,7 @@ use App\Model\Auth;
                     </div>
                     <div class="hidden group-hover:block absolute bg-gray-100 min-w-[100px] shadow-lg z-10">
                         <a class="float-none text-black px-4 py-3 no-underline block text-left"  href="<?= BASE_URL ?>perfil/<?= Auth::getId_usuario()?>">Perfil</a>
-                        <a class="float-none text-black px-4 py-3 no-underline block text-left"  href="<?=  BASE_URL ?>dashboard">Dashboard</a>
+                        <a class="float-none text-black px-4 py-3 no-underline block text-left"  href="<?= BASE_URL ?>dashboard">Dashboard</a>
                         <a class="float-none text-black px-4 py-3 no-underline block text-left"  href="<?= BASE_URL ?>logout">Logout</a>
                     </div>
                 </li>

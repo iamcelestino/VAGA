@@ -16,22 +16,22 @@
                 </div>
             </div>
         </section>
-
         <section class="">
             <div class="container py-16">
-                <h1 class="text-blue-950 text-2xl font-bold mb-8">Lista os melhores estudantes</h1>
-                <div class="">
-                   <h1>Esta e a pagina para os estudantes</h1>
+                <h1 class="text-blue-950 text-2xl font-bold">Lista os melhores estudantes</h1>
+                <p class="mb-8">Os Melhores Estudantes Endorsados pelas suas respectivas escolas encontram-se cá.</p>
+
+                <div class=" sm:grid grid-cols-2 md:grid-cols-4 gap-6" id="">
                    <?php if($estudantes): ?>
                         <?php foreach($estudantes as $estudante): ?>
-                   <div class="mb-5">
+                   <div class="mb-5 ">
                         <div class="">
-                            <img src="<?=ASSETS_URL?>/images/473728911_950013220562299_2246884688973482272_n.jpg" alt="">
-                            <div class="bg-gray-100">
+                            <img src="<?=escape(busca_imagem('uploads/' . $estudante->foto)) ?>" alt="Foto do Estudante">">
+                            <div class="bg-gray-100 p-4">
                                 <p><span class="font-bold">Nome</span> <?=escape($estudante->nome)?></p>
                                 <p><span class="font-bold">Email</span> <?=escape($estudante->email)?></p>
                                 <p><span class="font-bold">Endereco</span> <?=escape($estudante->endereco)?></p>
-                                <a class="bg-blue-600 text-white font-bold py-2 px-4" href="<?=BASE_URL?>estudante/detalhes/<?= $estudante->id_usuario?>">Mais detalhes</a>
+                                <a class="bg-blue-600 text-white font-bold py-2 px-4 inline-block w-full text-center rounded-md mt-3" href="<?=BASE_URL?>perfil/<?= $estudante->id_usuario?>">Perfil</a>
                             </div>
                         </div>
                    </div>

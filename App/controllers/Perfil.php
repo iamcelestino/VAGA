@@ -5,10 +5,12 @@ use App\Core\Controller;
 
 class Perfil extends Controller
 {
-    public function index(int $id = null): void
+    public function index(int $id): void
     {   
-        $usuario = $this->load_model('Empresa');
+        $usuario = $this->load_model('usuario');
         $dados_usuario = $usuario->first('id_usuario', $id);
+
+        dd($dados_usuario);
 
         $this->view('perfil', [
             'usuario' => $dados_usuario
