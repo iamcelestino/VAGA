@@ -12,5 +12,7 @@
             "name": "Celestino Trosso"
         }
     ],
-    "require": {}
+    "require": {
+        "intervention/image": "^3.11"
+    }
 }

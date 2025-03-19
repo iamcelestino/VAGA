@@ -27,9 +27,10 @@ use App\Model\Imagem;
                 <div class="sm:grid sm:grid-cols-2 md:grid-cols-3 gap-8">
                     <?php if($empresas): ?>
                         <?php foreach($empresas as $empresa): ?>
+                            <?php $imagem = busca_imagem($empresa->usuario->imagem) ?>
                     <div class="shadow-gray-400 shadow-2xl p-4 rounded-md flex-1">
                         <div class="flex items-center gap-4">
-                            <img src="<?=ASSETS_URL?>/<?=$empresa->usuario->imagem?> " alt="">
+                            <img class="w-2/4 rounded-full" src="<?=$imagem?>" alt="">
                             <div class="">
                                 <p class=""><?= $empresa->usuario->nome ?></p>
                                 <a class="" href=""><?= $empresa->usuario->endereco ?></a>

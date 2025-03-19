@@ -45,27 +45,27 @@
                                 <p class="text-gray-300 text-xs"><?=$emprego->criado_em ?></p>
                             </div>
                         </div>
-                        <div>
-                            <span>Photoshop</span>
-                            <span>UI/UX</span>
-                            <span>Canva</span>
-                        </div>
                     </div>
                     <div class="">
-                        <div class="mt-8">
-                            <div class="">
-                                <h1 class="text-blue-500 font-bold">SOBRE A EMPRESA</h1>
-                                <div>
-                            
+                    <div class="flex">
+                            <div class="flex-1">
+                                <h1 class="text-blue-500 font-bold">MAIS SOBRE O EMPREGO</h1>
+                                <div class="">
+                                    <P><span class="font-bold">Descricao:</span> <?=escape($emprego->descricao)?></P>
+                                    <P><span class="font-bold">Qualificao:</span> <?=escape($emprego->qualificacao)?></P>
+                                    <P><span class="font-bold">Tipo de emprego:</span> <?=escape($emprego->tipo_emprego)?></P>
+                                    <P><span class="font-bold">Estado:</span> <?=escape($emprego->status)?></P>
                                 </div>
                             </div>
-                            <div class="">
-                            <h1 class="text-blue-500 font-bold">PAPEL </h1>
-                            <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta suscipit, fugit earum atque illo quibusdam ipsum omnis tenetur, reprehenderit iure facilis qui expedita ratione distinctio possimus assumenda totam? Excepturi libero, animi consequatur perferendis optio magni officia soluta. Molestias, at.</p>
+                            <div class=" flex-1">
+                                <h1 class="text-blue-500 font-bold">SOBRE A EMPRESA</h1>
+                                <div class="">
+                                    <P><span class="font-bold">Email:</span> <?=escape($emprego->usuario->usuario->email)?></P>
+                                    <P><span class="font-bold">Sector:</span> <?=escape($emprego->usuario->sector)?></P>
+                                    <P><span class="font-bold">Endereco:</span> <?=escape($emprego->usuario->usuario->endereco)?></P>
+                                    <P><span class="font-bold">NIF:</span> <?=escape($emprego->usuario->NIF)?></P>
+                                </div>
                             </div>
-                        </div>
-                        <div class="">
-                            <h1></h1>
                         </div>
                     </div>
                 </div>

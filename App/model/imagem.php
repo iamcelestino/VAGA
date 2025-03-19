@@ -76,7 +76,7 @@ class Imagem {
 
   public function perfil_Thumb($imagePath) 
   {
-    $cropSize = 600;
+    $cropSize = 300;
     
     $ext = strtolower((pathinfo($imagePath, PATHINFO_EXTENSION)));
 

@@ -25,7 +25,7 @@
                 </nav>
                 <div class="flex items-center">
                     <li class="list-none hidden sm:inline-block ml-4"><a href="<?= BASE_URL ?>login">login</a></li>
-                    <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="<?= BASE_URL ?>cadastro">Sign up</a></li>
+                    <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="<?= BASE_URL ?>cadastro">Cadastro</a></li>
                     <li class="list-none bg-blue-600 inline-block px-[1.2rem] py-[0.4rem] rounded-md font-medium text-white"><a href="<?= BASE_URL ?>/empresa/post_job">Post Job</a></li>
                     <div class="flex flex-col ml-4 md:hidden">
                         <span class="bg-slate-400 py-[3px] mb-[0.2rem] w-8 rounded-md"></span>

@@ -21,8 +21,6 @@ class Empresa extends Controller
         $empresa = $this->load_model('Empresa');
         $dados_empresa = $empresa->findAll();
 
-        dd($dados_empresa);
-
         $this->view('empresas', [
             'empresas' => $dados_empresa
         ]);
@@ -39,7 +37,9 @@ class Empresa extends Controller
 
     public function emprego_activo(int $id_empresa): void
     {
-        $empregos = $this->database->query("SELECT * FROM empregos WHERE id_empresa = :id_empresa AND STATUS = 'ativo'", ['id_empresa' => $id_empresa]);
+        $empregos = $this->database->query("SELECT * FROM empregos 
+                                            WHERE id_empresa = :id_empresa 
+                                            AND STATUS = 'ativo'", ['id_empresa' => $id_empresa]);
 
         $this->view('empresa_emprego', [
             'empregos' => $empregos,

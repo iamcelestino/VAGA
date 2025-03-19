@@ -104,6 +104,11 @@ class Emprego extends Controller
         ]);
     }
 
+    public function detalhes($id): void
+    {
+
+    }
+
     public function deletar_emprego(int $id = null): void
     {
         

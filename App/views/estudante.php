@@ -24,9 +24,10 @@
                 <div class=" sm:grid grid-cols-2 md:grid-cols-4 gap-6" id="">
                    <?php if($estudantes): ?>
                         <?php foreach($estudantes as $estudante): ?>
+                            <?php $imagem = busca_imagem($estudante->imagem) ?>
                    <div class="mb-5 ">
                         <div class="">
-                            <img src="<?=escape(busca_imagem('uploads/' . $estudante->foto)) ?>" alt="Foto do Estudante">">
+                            <img src="<?=$imagem?>" alt="Foto do Estudante">
                             <div class="bg-gray-100 p-4">
                                 <p><span class="font-bold">Nome</span> <?=escape($estudante->nome)?></p>
                                 <p><span class="font-bold">Email</span> <?=escape($estudante->email)?></p>

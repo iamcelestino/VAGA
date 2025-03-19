@@ -44,14 +44,19 @@ function buscar_selecionado(string $key, mixed $value)
     }
 }
 
-function busca_imagem($imagem) 
+function busca_imagem($image) 
 {
-    if (!file_exists($imagem)) {
-        return ASSETS_URL . '/images/undraw_pic_profile_re_7g2h.svg';
-    } else {
-        $imageModel = new Imagem();
-        return ASSETS_URL . '/' . $imageModel->perfil_Thumb($imagem); // Use ASSETS_URL instead of BASE_URL
+   
+    if(!file_exists($image)) {
+
+        $image = ASSETS_URL.'images/undraw_pic_profile_re_7g2h.svg';
     }
+    else {
+        $imageModel = new Imagem();
+        $image = BASE_URL . 'public/'. $imageModel->perfil_Thumb($image);
+    }
+
+    return $image;
 }
 
 
@@ -111,7 +116,7 @@ function carregar_ficheiro(mixed $files): array
         $base = preg_replace('/[^\w-]/', "_", $base);
         $nome_ficheiro = $base . "." . $pathInfo['extension'];
 
-        $diretorio = "/uploads/";
+        $diretorio = "uploads/";
         
         if(!is_dir($diretorio)) {
             mkdir($diretorio, 0755, true);

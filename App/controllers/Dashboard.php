@@ -27,7 +27,6 @@ class Dashboard extends Controller
     {  
         $candidatura = $this->load_model('Candidatura');
         $dados_candidatura = $candidatura->findAll();
-        dd($dados_candidatura);
 
         $this->view('empresa_dashboard', [
             'candidaturas' => $dados_candidatura
@@ -56,9 +55,11 @@ class Dashboard extends Controller
         ]);
     }
 
-    public function estudante(): void
-    {    $candidatura = $this->load_model('Candidatura');
-        $dados_candidatura = $candidatura->findAll();
+    public function estudante(int $id): void
+    {    
+        $candidatura = $this->load_model('Candidatura');
+        $dados_candidatura = $candidatura->where('id_estudante', $id);
+
         dd($dados_candidatura);
         $this->view('estudante_dashboard');
     }

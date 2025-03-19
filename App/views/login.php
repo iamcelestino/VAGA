@@ -25,7 +25,7 @@
                 </nav>
                 <div class="flex items-center">
                     <li class="list-none hidden sm:inline-block ml-4"><a href="<?= BASE_URL ?>login">login</a></li>
-                    <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="<?= BASE_URL ?>cadastro">Sign up</a></li>
+                    <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="<?= BASE_URL ?>cadastro">Cadastro</a></li>
                     <li class="list-none bg-blue-600 inline-block px-[1.2rem] py-[0.4rem] rounded-md font-medium text-white"><a href="<?= BASE_URL ?>/empresa/post_job">Post Job</a></li>
                     <div class="flex flex-col ml-4 md:hidden">
                         <span class="bg-slate-400 py-[3px] mb-[0.2rem] w-8 rounded-md"></span>
@@ -47,7 +47,10 @@
                         <h1 class="font-bold text-3xl"><span class="text-blue-500">Olá Outra Vez</span> <br>
                             Seja Bem-Vindo
                         </h1>
-                        <p class="text-gray-400 my-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, illum consequatur nisi quibusdam necessitatibus aliquam beatae, similique fuga nobis in quisquam tempore accusantium adipisci voluptas perferendis fugit dolore pariatur facere.</p>
+                        <p class="text-gray-400 my-4">
+                            Se fores estudante, faça login procure os melhores empregos, candidate-se a uma vaga de emprego. <br>
+                            Caso For Uma empresa Este é o melhor local para encontrares os melhores trabalhadores para a sua empresa.
+                        </p>
                         <form action="" method="POST">
                             <label for="email" class=" text-blue-950">Email Address</label>
                             <input

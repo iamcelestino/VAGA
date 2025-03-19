@@ -64,7 +64,7 @@ class Model extends Database
        return $data;
     }
 
-    public function findAll(): array|object 
+    public function findAll(): array|object|bool
     {
         $query = " SELECT * FROM ". $this->table;
         $data = $this->query($query);

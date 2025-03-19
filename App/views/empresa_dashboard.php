@@ -20,7 +20,7 @@
                 <div class="md:flex md:items-center md:justify-between mb-4">
                     <h1 class="font-bold text-2xl">8 candidaturas Apresentadas</h1>
                     <div class="">
-                        <a href="" class="py-2 p-4 bg-blue-600 text-white font-bold rounded-md">Postar Emprego</a>
+                        <a href="<?=BASE_URL?>emprego/postar_emprego" class="py-2 p-4 bg-blue-600 text-white font-bold rounded-md">Postar Emprego</a>
                     </div>
                 </div>
                 <table class="min-w-full divide-y divide-gray-200">
