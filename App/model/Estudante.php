@@ -19,7 +19,6 @@ class Estudante extends Model
     protected array $after_select = [
         'busca_usuario'
     ];
-
     
     public function validar(array $dados_estudante): bool
     {

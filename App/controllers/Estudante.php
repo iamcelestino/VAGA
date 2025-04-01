@@ -24,6 +24,16 @@ class Estudante extends Controller
         ]);
     }
 
+    public function melhores_estudante(): void
+    {
+        $estudantes = $this->load_model('endorsamento');
+        $dados_estudantes = $estudantes->findAll();
+
+        $this->view('melhores_estudantes', [
+            'estudantes' => $dados_estudantes
+        ]);
+    }
+
     public function detalhes(int $id = null): void
     {
         $dados_estudante = $this->database->query('SELECT a.*, b.data_nascimento, b.curso

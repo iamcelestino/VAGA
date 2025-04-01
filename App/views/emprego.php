@@ -27,11 +27,12 @@
                 </div>
                 <?php if($empregos): ?>
                     <?php foreach($empregos as $emprego): ?>
+                        <?php $imagem = busca_imagem($emprego->usuario->usuario->imagem) ?>
                 <div class="mb-4">
                     <div class="shadow-gray-300 shadow-2xl rounded-md p-6">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center">
-                                <ion-icon class="text-4xl bg-gray-400 rounded-full p-2 mr-4" name="logo-google"></ion-icon>
+                                <img class="w-2/4 rounded-full" src="<?=$imagem?>" alt="">
                                 <div class="">
                                     <p class="font-bold"><?= $emprego->titulo?></p>
                                     <p class="text-gray-300"><?=$emprego->usuario->usuario->nome?></p>

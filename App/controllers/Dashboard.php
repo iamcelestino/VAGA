@@ -20,7 +20,6 @@ class Dashboard extends Controller
     public function index(): void
     {
         $tipo_usuario = $_SESSION['USUARIO']->tipo_usuario;
-        
     }
 
     public function empresa(): void
@@ -28,6 +27,8 @@ class Dashboard extends Controller
         $candidatura = $this->load_model('Candidatura');
         $dados_candidatura = $candidatura->findAll();
 
+        //FILTRAR POR EMPRESA
+        
         $this->view('empresa_dashboard', [
             'candidaturas' => $dados_candidatura
         ]);

@@ -57,5 +57,4 @@ class Candidatura extends Model
         }
         return $dados;
     }
-    
 }

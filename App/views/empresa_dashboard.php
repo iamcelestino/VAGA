@@ -39,15 +39,15 @@
                         <?php foreach($candidaturas as $candidatura): ?>
                     <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
-                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_estudante->usuario->nome) ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_estudante->usuario->email) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->usuario->usuario->nome) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->usuario->usuario->email) ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->titulo) ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->tipo_emprego) ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->qualificacao) ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->feedback) ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <form action="">
-                                        <select name="" id="">
+                                        <select name="feedback" id="">
                                             <option value="">Aceite</option>
                                             <option value="">Recusado</option>
                                         </select>
