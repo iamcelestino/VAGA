@@ -7,8 +7,8 @@
                         <div class="">
                             <h1 class="text-blue-950 text-4xl md:text-4xl font-bold">Contrate os <span class="text-blue-600">melhores</span> estudantes recen <span class="text-blue-600">formados</span></h1>
                             <p class="my-6 text-slate-600">A Boa Conexao entre os melhores estudantes da nosssa universidade acontece aqui</p>
-                            <form class=" bg-white p-2 rounded-md" action="" method="">
-                                <input type="search" name="search" class="md:w-[85%]" >
+                            <form class=" bg-white rounded-md inline-block " action="" method="">
+                                <input type="search" name="search" class="p-2" >
                                 <button class="bg-blue-600 text-white font-bold py-[0.4rem] px-[0.4rem] rounded-md" type="submit">Pesquisar</button>
                             </form>
                         </div>

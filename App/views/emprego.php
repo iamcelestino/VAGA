@@ -7,10 +7,6 @@
                         <div class="">
                             <h1 class="text-blue-950 text-4xl md:text-4xl font-bold">Discubra Os melhores<span class="text-blue-500"> Melhores empregos</span></h1>
                             <p class="my-6 text-slate-600">A Boa Conexao entre os melhores estudantes da nosssa universidade acontece aqui</p>
-                            <form class=" bg-white p-2 rounded-md" action="" method="">
-                                <input type="search" name="search" class="md:w-[85%]" >
-                                <button class="bg-blue-600 text-white font-bold py-[0.4rem] px-[0.4rem] rounded-md" type="submit">Pesquisar</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -19,11 +15,10 @@
         <?php $this->view('partials/area_trabalho') ?>       
         <section>
             <div class="container py-9">
-                <div class="flex justify-between">
-                    <h2 class="font-bold text-xl text-blue-950">Trabalhos Relacionados</h2>
-                    <a href="">
-                        <ion-icon class="text-3xl" name="return-up-forward-outline"></ion-icon>
-                    </a>
+                <div class="">
+                    <div>
+                        <h2 class="font-bold text-xl text-blue-950">Trabalhos Relacionados</h2>
+                    </div>
                 </div>
                 <?php if($empregos): ?>
                     <?php foreach($empregos as $emprego): ?>
@@ -31,11 +26,13 @@
                 <div class="mb-4">
                     <div class="shadow-gray-300 shadow-2xl rounded-md p-6">
                         <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <img class="w-2/4 rounded-full" src="<?=$imagem?>" alt="">
-                                <div class="">
-                                    <p class="font-bold"><?= $emprego->titulo?></p>
-                                    <p class="text-gray-300"><?=$emprego->usuario->usuario->nome?></p>
+                            <div class="flex items-center justify-start space-x-2">
+                                <div class="max-w-[5rem]">
+                                    <img class="w-20 h-20 rounded-full object-cover" src="<?=$imagem?>" alt="">
+                                </div>
+                                <div>
+                                    <p class="font-bold"><?= $emprego->titulo ?></p>
+                                    <p class="text-blue-950"><?= $emprego->usuario->usuario->nome ?></p>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center justify-center">
@@ -43,7 +40,7 @@
                                     <input type="" class="hidden" value="<?=$emprego->id_emprego ?>" name="id_emprego">
                                     <button type="submit" class="bg-blue-600 text-white font-bold px-4 p-2 rounded-md">Candidatar-se</button>
                                 </form>
-                                <p class="text-gray-300 text-xs"><?=$emprego->criado_em ?></p>
+                                <p class="text-blue-950 text-xs"><?=$emprego->criado_em ?></p>
                             </div>
                         </div>
                     </div>
