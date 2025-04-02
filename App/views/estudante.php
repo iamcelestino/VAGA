@@ -7,10 +7,6 @@
                         <div class="">
                             <h1 class="text-blue-950 text-4xl md:text-4xl font-bold">Procura pelo candidato para sua empresa?</h1>
                             <p class="my-6 text-slate-600">encontre os Melhores estudantes para a sua empresa</p>
-                            <form class=" bg-white p-2 rounded-md" action="" method="">
-                                <input type="search" name="search" class="md:w-[85%]" >
-                                <button class="bg-blue-600 text-white font-bold py-[0.4rem] px-[0.4rem] rounded-md" type="submit">Pesquisar</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -18,8 +14,16 @@
         </section>
         <section class="">
             <div class="container py-16">
-                <h1 class="text-blue-950 text-2xl font-bold">Lista os melhores estudantes</h1>
-                <p class="mb-8">Os Melhores Estudantes Endorsados pelas suas respectivas escolas encontram-se cá.</p>
+                <div class="md:flex items-center justify-between">
+                    <div>
+                        <h1 class="text-blue-950 text-2xl font-bold">Lista os melhores estudantes</h1>
+                        <p class="mb-8">Os Melhores Estudantes Endorsados pelas suas respectivas escolas encontram-se cá.</p>
+                    </div>
+                    <form class=" bg-white rounded-md inline-block " action="" method="">
+                        <input type="search" name="search" class="p-2 border-2 border-gray-400 rounded-md" >
+                        <button class="bg-blue-600 text-white font-bold py-[0.4rem] px-[0.4rem] rounded-md" type="submit">Pesquisar</button>
+                    </form>
+                </div>
 
                 <div class=" sm:grid grid-cols-2 md:grid-cols-4 gap-6" id="">
                    <?php if($estudantes): ?>

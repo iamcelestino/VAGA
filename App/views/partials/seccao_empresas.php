@@ -1,7 +1,7 @@
 <section >
     <div class="container">
         <div class="text-center">
-            <h1>Empresas Relacionadas</h1>
+            <h1 class="font-bold text-2xl">Empresas Relacionadas</h1>
             <p class="">
                 As Melhores Empresas estão a procura de Melhores estudantes
                 candidata-se para uma Vaga.

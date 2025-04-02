@@ -7,10 +7,6 @@
                         <div class="">
                             <h1 class="text-blue-950 text-4xl md:text-4xl font-bold">Discubra Os melhores<span class="text-blue-500"> Melhores empregos</span></h1>
                             <p class="my-6 text-slate-600">A Boa Conexao entre os melhores estudantes da nosssa universidade acontece aqui</p>
-                            <form class=" bg-white p-2 rounded-md" action="" method="">
-                                <input type="search" name="search" class="md:w-[85%]" >
-                                <button class="bg-blue-600 text-white font-bold py-[0.4rem] px-[0.4rem] rounded-md" type="submit">Pesquisar</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -27,11 +23,12 @@
                 </div>
                 <?php if($empregos): ?>
                     <?php foreach($empregos as $emprego): ?>
+                        <?php $imagem = busca_imagem($emprego->usuario->usuario->imagem) ?>
                 <div class="mb-4">
                     <div class="shadow-gray-300 shadow-2xl rounded-md p-6">
                         <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <ion-icon class="text-4xl bg-gray-400 rounded-full p-2 mr-4" name="logo-google"></ion-icon>
+                            <div class="flex items-center justify-start space-x-2">
+                               <div class="max-w-[5rem]"><img class="rounded-full" src="<?=$imagem?>" alt=""></div>
                                 <div class="">
                                     <p class="font-bold"><?= $emprego->titulo?></p>
                                     <p class="text-gray-300"><?=$emprego->usuario->usuario->nome?></p>
@@ -75,25 +72,6 @@
                 <?php endif ?>
             </div>
         </section>
-
-        <section >
-            <div  style="background-image: url('./public/assets/images/wave.svg');"  class="bg-no-repeat bg-center bg-cover min-h-full pb-52 pt-16">
-                <div class="text-center">
-                    <h1>Empresas Relacionadas</h1>
-                    <p>
-                        As Melhores Empresas estão a procura de Melhores estudantes
-                        candidata-se para uma Vaga.
-                    </p>
-                    <div>
-                        <li class="list-none"><a href="">GOOGLE</a></li>
-                        <li class="list-none"><a href=""></a>JETUR</li>
-                        <li class="list-none"><a href=""></a>CARRINHO</li>
-                        <li class="list-none"><a href=""></a>SONANGOL</li>
-                        <li class="list-none"><a href=""></a>BAI</li>
-                        <li class="list-none"><a href=""></a>ISPB</li>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php $this->view('partials/seccao_empresas') ?>
     </main>
 <?php $this->view('partials/footer') ?>

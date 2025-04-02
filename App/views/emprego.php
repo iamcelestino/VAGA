@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="">
+                    <div class="mb-4">
                         <div class="flex">
                             <div class="flex-1">
                                 <h1 class="text-blue-500 font-bold">MAIS SOBRE O EMPREGO</h1>
