@@ -19,7 +19,7 @@ use App\Model\Imagem;
 
         <section class="">
             <div class="container py-16">
-                <div class="flex items-center justify-between">
+                <div class="sm:flex items-center justify-between">
                     <h1 class="text-blue-950 text-2xl font-bold mb-8">Lista de Empresas</h1>
                     <form class=" bg-white rounded-md inline-block " action="" method="">
                         <input type="search" name="search" class="p-2 border-2 border-gray-400 rounded-md" >

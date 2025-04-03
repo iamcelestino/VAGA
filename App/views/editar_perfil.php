@@ -42,102 +42,75 @@
                 <div class="">
                     <div class="bg-gray-100 p-4 sm:p-12 rounded-md">
                         <form action="" method="POST">
-
-                            <div class="">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <h1 class="font-bold text-3xl">Editar Perfil</h1>
+                        <?php if($usuario): ?>
+                            <?php $imagem = busca_imagem($usuario->imagem)?> 
+                            <div class="sm:flex justify-between">
+                                <div class="">
+                                    <img class="rounded-full" src="<?=$imagem?>" alt="">
+                                    <div class="mt-4 text-center">
+                                        <label for="image_browser" class="bg-indigo-500 p-2 text-white font-medium">
+                                            <input id="image_browser" type="file" name="imagem" class="file_info">
+                                        </label>
                                     </div>
                                 </div>
-                            </div>
-
-                            <label for="nome" class=" text-blue-950">Nome</label>
-                            <input
-                                class="p-[0.7rem] w-full my-2 border-2 border-gray-200 rounded-md"
-                                type="text"
-                                name="nome"
-                                id="nome"
-                                value="<?=buscar_var('nome')?>"
-                                placeholder="Nome"
-                            >
-
-                            <label for="Email address" class="text-blue-950">Email Address</label>
-                            <input
-                                class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
-                                type="text"
-                                name="email"
-                                id="Email address"
-                                value="<?=buscar_var('email')?>"
-                                placeholder="Email address"
-                            >
-                    
-                            <label for="" class="text-blue-950">Endereco</label>
-                            <input
-                                class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
-                                type="text"
-                                name="endereco"
-                                id="endereco"
-                                value="<?=buscar_var('endereco')?>"
-                                placeholder="Endereco"
-                            >
-                            <div class="">
-                                <select name="tipo_usuario" id="tipo_usuario" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" onchange="
-                                mostraCampoParaEmpresa()">
-                                    <option value="">Tipo de Usuario</option>
-                                    <option value="escola">Escola</option>
-                                    <option value="empresa">Empresa</option>
-                                    <option value="estudante">Estudante</option>
-                                </select>
-                            </div>
-                            
-                            <div id="empresa" class="hidden">
-                                <input type="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" name="NIF" placeholder="NIF">
-                                <select name="sector" id="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md">
-                                    <option value="">Sector</option>
-                                    <option value="Finanças">Finanças</option>
-                                    <option value="Educação">Educação</option>
-                                    <option value="Saúde">Saúde</option>
-                                    <option value="Tecnologia">Tecnologia</option>
-                                    <option value="outro">Tecnologia</option>
-                                </select>
-                            </div>
-                            <div class="hidden" id="estudante">
                                 <div>
-                                    <label for="data_nascimento" class="">Data de Nascimento</label>
-                                    <input type="date" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" placeholder="data de nascimento" name="data_nascimento">
-                                </div>
-                                <div class="">
-                                <?php if($escolas): ?>
-                                    <select name="id_escola" id="" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md">
-                                    <?php foreach($escolas as $escola): ?>
-                                        <option value="<?= $escola->id_escola ?>"><?=$escola->nome?></option>
-                                    <?php endforeach ?>
+                                    <div class="">
+                                        <div class="flex items-center justify-between">
+                                            <div>
+                                                <h1 class="font-bold text-3xl">Editar Perfil</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label for="nome" class=" text-blue-950">Nome</label>
+                                    <input
+                                        class="p-[0.7rem] w-full my-2 border-2 border-gray-200 rounded-md"
+                                        type="text"
+                                        name="nome"
+                                        id="nome"
+                                        value="<?=buscar_var('nome', $usuario->nome)?>"
+                                        placeholder="Nome"
+                                    >
+                                    <label for="Email address" class="text-blue-950">Email Address</label>
+                                    <input
+                                        class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
+                                        type="text"
+                                        name="email"
+                                        id="Email address"
+                                        value="<?=buscar_var('email', $usuario->email)?>"
+                                        placeholder="Email address"
+                                    >
+                                    <div class="">
+                                    <select name="tipo_usuario" id="tipo_usuario" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"">
+                                        <option value="">Tipo de Usuario</option>
+                                        <option <?=buscar_selecionado('tipo_usuario', 'escola')?> value="escola">Escola</option>
+                                        <option <?=buscar_selecionado('tipo_usuario', 'empresa')?>  value="empresa">Empresa</option>
+                                        <option <?=buscar_selecionado('tipo_usuario', 'estudante')?> value="estudante">Estudante</option>
                                     </select>
-                                <?php endif ?>
-                                </div>
-                                <div class="">
-                                    <label class="" for="">Curso</label>
-                                    <input type="text" class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md" placeholder="curso" name="curso">
+                                    </div>
+                                    <label for="" class="text-blue-950">Endereco</label>
+                                    <input
+                                        class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
+                                        type="text"
+                                        name="endereco"
+                                        id="endereco"
+                                        value="<?=buscar_var('endereco', $usuario->endereco)?>"
+                                        placeholder="Endereco"
+                                    >
+                                    <label for="password" class="text-blue-950">Palavra-passe</label>
+                                    <input
+                                        class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
+                                        type="text"
+                                        name="password"
+                                        id="password"
+                                        value="<?=buscar_var('password')?>"
+                                        placeholder="Password"
+                                    >
+                                    <button class="bg-blue-500 text-white py-[0.7rem] w-full rounded-md font-bold text-xl">Salvar</button>
                                 </div>
                             </div>
-                           
-
-
-                            <label for="password" class="text-blue-950">Palavra-passe</label>
-                            <input
-                                class="p-[0.7rem] w-full my-2 border-2 border-gray-300 rounded-md"
-                                type="text"
-                                name="password"
-                                id="password"
-                                value="<?=buscar_var('password')?>"
-                                placeholder="Password"
-                            >
-                            <p class="text-gray-400 my-2 text-center">
-                                Ainda não tens uma conta? 
-                                <a href="<?=BASE_URL?>/signup" class="text-blue-900">Criar Conta</a>
-                            </p>
-                            <button class="bg-blue-500 text-white py-[0.7rem] w-full rounded-md font-bold text-xl">Criar Conta</button>
                         </form>
+                    <?php else: ?>
+                    <?php endif  ?>
                     </div>
                 </div>
             </div>

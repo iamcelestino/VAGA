@@ -1,34 +1,9 @@
-<?php $this->view('partials/header') ?>
-    <main>
-        <section class="bg-gray-100">
-            <div class="container py-9">
-                <div class="">
-                    <div class="">
-                        <div class="">
-                            <h1 class="text-blue-950 text-4xl md:text-4xl font-bold">Discubra Os melhores<span class="text-blue-500"> Melhores empregos</span></h1>
-                            <p class="my-6 text-slate-600">A Boa Conexao entre os melhores estudantes da nosssa universidade acontece aqui</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
- 
-        <section>
-            <div class="container py-9">
-                <div class="sm:flex justify-between items-center">
-                    <h2 class="font-bold text-xl text-blue-950">Trabalhos Relacionados</h2>
-                    <form class=" bg-white rounded-md inline-block " action="" method="">
-                        <input type="search" name="search" class="p-2 border-2 border-gray-400 rounded-md" >
-                        <button class="bg-blue-600 text-white font-bold py-[0.4rem] px-[0.4rem] rounded-md" type="submit">Pesquisar</button>
-                    </form>
-                </div>
-                <?php if($empregos): ?>
+<?php if($empregos): ?>
                     <?php foreach($empregos as $emprego): ?>
                         <?php $imagem = busca_imagem($emprego->usuario->usuario->imagem) ?>
                 <div class="mb-4">
                     <div class="shadow-gray-300 shadow-2xl rounded-md p-6">
-                        <div class="sm:flex items-center justify-between">
-                            <div class="flex items-center">
+                        <div class="flex items-center justify-between">
                             <div class="flex items-center justify-start space-x-2">
                                 <div class="max-w-[5rem]">
                                     <img class="w-20 h-20 rounded-full object-cover" src="<?=$imagem?>" alt="">
@@ -38,18 +13,17 @@
                                     <p class="text-blue-950"><?= $emprego->usuario->usuario->nome ?></p>
                                 </div>
                             </div>
-                            </div>
-                            <div class="sm:flex flex-col items-center justify-center">
+                            <div class="flex flex-col items-center justify-center">
                                 <form class="mb-4" method="POST">
                                     <input type="" class="hidden" value="<?=$emprego->id_emprego ?>" name="id_emprego">
-                                    <button type="submit" class="w-full bg-blue-600 text-white font-bold px-4 p-2 rounded-md">Candidatar-se</button>
+                                    <button type="submit" class="bg-blue-600 text-white font-bold px-4 p-2 rounded-md">Candidatar-se</button>
                                 </form>
-                                <p class="text-gray-300 text-sm">publicado: 12 de Novembro</p>
+                                <p class="text-blue-950 text-xs"><?=$emprego->criado_em ?></p>
                             </div>
                         </div>
                     </div>
-                    <div class="">
-                    <div class="sm:flex">
+                    <div class="mb-4">
+                        <div class="flex">
                             <div class="flex-1">
                                 <h1 class="text-blue-500 font-bold">MAIS SOBRE O EMPREGO</h1>
                                 <div class="">
@@ -75,9 +49,3 @@
                 <?php else:?>
                     <h1>NAO HA EMPREGOS DISPONIVEIS</h1>
                 <?php endif ?>
-            </div>
-        </section>
-        <?php $this->view('partials/seccao_empresas') ?>
-
-    </main>
-<?php $this->view('partials/footer') ?>
