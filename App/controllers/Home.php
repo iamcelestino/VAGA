@@ -10,10 +10,13 @@ class home extends Controller
         $usuario = $this->load_model('Usuario');
         $usuarios = $usuario->findAll();
 
+        $emprego = $this->load_model('Emprego');
+        $empregos = $emprego->findAll();
+
         $this->view('home', [
-            'usuarios' => $usuarios
+            'usuarios' => $usuarios,
+            'empregos' => $empregos
         ]);
 
-        $this->view('home');
     }
 }
