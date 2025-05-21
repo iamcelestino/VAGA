@@ -61,3 +61,4 @@ $this->view('partials/header');
         </div>
     </section>
 </main>
+<?php $this->view('partials/footer');

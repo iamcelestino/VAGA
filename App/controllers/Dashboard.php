@@ -20,6 +20,17 @@ class Dashboard extends Controller
     public function index(): void
     {
         $tipo_usuario = $_SESSION['USUARIO']->tipo_usuario;
+
+        if($tipo_usuario == 'empresa') {
+            $this->empresa();
+        }elseif($tipo_usuario == 'escola') {
+            $this->escola();
+        }else {
+            $tipo_usuario = $_SESSION['USUARIO']->tipo_usuario;
+            $id_estudante = $_SESSION['USUARIO']->id_usuario;
+            $this->estudante($id_estudante);
+
+        }
     }
 
     public function empresa(): void
@@ -61,7 +72,7 @@ class Dashboard extends Controller
         $candidatura = $this->load_model('Candidatura');
         $dados_candidatura = $candidatura->where('id_estudante', $id);
 
-        dd($dados_candidatura);
+
         $this->view('estudante_dashboard');
     }
 }

@@ -24,7 +24,6 @@ class Cadastro extends Controller
 
     public function index()
     {   
-
         if (count($_POST) > 0) {    
            
             if(count($_FILES) > 0) {

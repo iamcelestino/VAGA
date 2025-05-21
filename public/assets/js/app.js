@@ -21,5 +21,24 @@ function mostraCampoParaEmpresa() {
 }
 
 
+//barra de Navegação
+const menu = document.getElementById('burger-menu');
+const mobile_menu = document.getElementById('mobileMenu');
+
+function showMenu() {
+    mobile_menu.classList.add("show");
+}
+
+function hideMneu(event) {
+     mobile_menu.classList.remove("show");
+     mobile_menu.stopPropagation()
+}
+
+menu.addEventListener("click", showMenu);
+mobile_menu.addEventListener("click", hideMneu);
+
+
+
+
 
 

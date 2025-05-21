@@ -58,23 +58,23 @@ class Emprego extends Controller
     public function postar_emprego(): void
     {   
         $erros = [];
-       if(count($_POST) > 0) {
+        if(count($_POST) > 0) {
 
-            if($this->emprego->validar($_POST)) {
+                if($this->emprego->validar($_POST)) {
 
-                $_POST['id_empresa'] = Auth::getId_usuario();
-                
-                $this->emprego->insert($_POST);
-                $this->redirect('emprego');
-            }
-            else {
-               $erros = $this->emprego->errors;
-            }
-       }
+                    $_POST['id_empresa'] = Auth::getId_usuario();
+                    
+                    $this->emprego->insert($_POST);
+                    $this->redirect('emprego');
+                }
+                else {
+                $erros = $this->emprego->errors;
+                }
+        }
 
-       $this->view('postar_trabalho',
-            ['empregos' => $_POST]
-        );
+        $this->view('postar_trabalho',
+                ['empregos' => $_POST]
+            );
         
     }
 

@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="flex flex-col mt-4 border-t-2 border-gray-200 pt-4 md:flex-row md:justify-between">
-            <p class="order-2 mt-2 md:mt-0">Copyright 2020 Vaga<span></span></p>
+            <p class="order-2 mt-2 md:mt-0">&copy; Copyright 2025 Vaga<span></span></p>
             <div class="flex md:order-2">
                 <p class="">Politicas e privacidade</p>
                 <p class="mx-6">Termos de Serviços</p>

@@ -95,9 +95,7 @@
                     <div class="md:w-2/4">
                         <h2 class="text-3xl font-bold">As melhores Empresas postam suas vagas aqui.</h2>
                         <p class="my-5">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, optio!
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sint!
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, cum.
+                        As melhores oportunidades estão aqui. Grandes empresas confiam nesta plataforma para divulgar suas vagas, oferecendo chances reais de crescimento profissional. Não perca a chance de trabalhar com marcas que valorizam talento, inovação e comprometimento. Cadastre-se, explore as vagas e dê o próximo passo na sua carreira.
                         </p>
                         <a class="bg-blue-600 text-white py-2 px-4 font-medium rounded-md inline-block" href="">Procurar</a>
                     </div>
@@ -115,11 +113,9 @@
                         <img src="<?= ASSETS_URL?>/images/augmented-reality-1-20.svg" alt="">
                     </div>
                     <div class="md:w-2/4">
-                        <h2 class="text-3xl font-bold">As melhores Empresas postam suas vagas aqui.</h2>
+                        <h2 class="text-3xl font-bold">Es um dos melhores estudantes da sua instituicao?</h2>
                         <p class="my-5">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, optio!
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sint!
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, cum.
+                            As melhores empresas e escolas estão conectadas no nosso website para encontrarem os melhores estudantes para serem contratados, conecte-se também.
                         </p>
                         <a class="bg-blue-600 text-white py-2 px-4 font-medium rounded-md inline-block" href="">Procurar</a>
                     </div>

@@ -44,10 +44,10 @@
                         <img src="<?= ASSETS_URL ?>/images/authentication-1-3.svg" alt="">
                     </div>
                     <div class="bg-gray-100 p-4 sm:p-12 rounded-md">
-                        <h1 class="font-bold text-3xl"><span class="text-blue-500">Olá Outra Vez</span> <br>
+                        <h1 class="font-bold text-3xl "><span class="text-blue-600">Olá Outra Vez</span> <br>
                             Seja Bem-Vindo
                         </h1>
-                        <p class="text-gray-400 my-4">
+                        <p class="text-gray-400 my-4 paragrafo">
                             Se fores estudante, faça login procure os melhores empregos, candidate-se a uma vaga de emprego. <br>
                             Caso For Uma empresa Este é o melhor local para encontrares os melhores trabalhadores para a sua empresa.
                         </p>

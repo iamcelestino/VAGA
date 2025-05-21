@@ -23,7 +23,6 @@ function escape(mixed $var) {
 
 function buscar_var(mixed $key, string $default = ''): string  
 {
-
     if(isset($_POST[$key])) {
 
         return $_POST[$key];

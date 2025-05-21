@@ -10,6 +10,24 @@ use App\Model\Auth;
     <link rel="stylesheet" href="<?=ASSETS_URL?>/style/output.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        #mobileMenu {
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            position: fixed;
+            color: white;
+            top: 0;
+            left: 0;
+            transform: translate3d(100vw, 0, 0);
+            transition: transform .3s cubic-bezier(0, .52, 0, 1);
+            padding: 0 2rem;
+        }
+
+        #mobileMenu.show {
+            transform: translate3d(0vw, 0, 0);
+        }
+    </style>
 </head>
 <body>
     <header class="bg-gray-100">
@@ -42,11 +60,25 @@ use App\Model\Auth;
                     <li class="list-none hidden sm:inline-block ml-4"><a href="<?= BASE_URL ?>login">login</a></li>
                     <li class="list-none hidden sm:inline-block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="<?= BASE_URL ?>cadastro">Cadastro</a></li>
                     <li class="list-none bg-blue-600 inline-block px-[1.2rem] py-[0.4rem] rounded-md font-medium text-white"><a href="<?= BASE_URL ?>emprego/postar_emprego">Postar Emprego</a></li>
-                    <div class="flex flex-col ml-4 md:hidden">
+                    <div class="flex flex-col ml-4 md:hidden" id="burger-menu">
                         <span class="bg-slate-400 py-[3px] mb-[0.2rem] w-8 rounded-md"></span>
                         <span class="bg-slate-400 py-[3px] mb-[0.2rem]  w-8 rounded-md"></span>
                         <span class="bg-slate-400 py-[3px] w-8 rounded-md"></span>
                     </div>
+                </div>
+
+                <div id="mobileMenu" class="menu">
+
+                    <nav class="">
+                        <li class="list-none"><a href="<?= BASE_URL ?>">Home</a></li>
+                        <li class="list-none ml-4"><a href="<?= BASE_URL ?>emprego">Procurar Emprego</a></li>
+                        <li class="list-none ml-4"><a href="<?= BASE_URL ?>empresa">Empresas</a></li>
+                        <li class="list-none ml-4"><a href="<?=BASE_URL?>estudante">Estudantes</a></li>
+                    </nav>
+                    <div class="">
+                    <li class="list-none block ml-4"><a href="<?= BASE_URL ?>login">login</a></li>
+                    <li class="list-none block mx-4 border-2 border-blue-600 px-[1.2rem] py-[0.4rem] rounded-md font-medium"><a href="<?= BASE_URL ?>cadastro">Cadastro</a></li>
+
                 </div>
             </div>
         </div>

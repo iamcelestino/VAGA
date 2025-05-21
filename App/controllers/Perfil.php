@@ -21,8 +21,6 @@ class Perfil extends Controller
         $usuario = $this->load_model('usuario');
         $dados_usuario = $usuario->first('id_usuario', $id);
 
-        dd($dados_usuario);
-
         $this->view('perfil', [
             'usuario' => $dados_usuario
         ]);

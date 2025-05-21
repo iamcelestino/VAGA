@@ -49,3 +49,4 @@
         </div>
     </section>
 </main>
+<?php $this->view('partials/footer'); ?>

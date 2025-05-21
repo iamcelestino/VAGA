@@ -19,6 +19,7 @@ class Estudante extends Controller
                                                     FROM usuarios as a 
                                                     INNER Join estudantes as b on a.id_usuario = b.id_usuario');
     
+    
         $this->view('Estudante', [
             'estudantes' => $dados_estudante
         ]);

@@ -18,21 +18,15 @@
                 <div class="">
                     <h1 class="text-blue-950 font-bold text-xl">Porque postar suas vaga aqui?</h1>
                     <div class="flex flex-items gap-10">
-                        <div class="">
+                        <div class="flex-1">
                             <ion-icon class="text-3xl  bg-gray-200 rounded-lg p-2 text-blue-500"" name="git-pull-request"></ion-icon>
                             <h1 class="text-blue-950 font-bold text-md">Encontras os melhores estudantes</h1>
-                            <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique tempore tempora corporis minus, natus, in blanditiis enim quasi asperiores molestias suscipit odio aspernatur explicabo maxime mollitia culpa at iste?</p>
+                            <p class="text-gray-400">Encontre os melhores talentos para sua empresa. Nossa plataforma conecta você aos estudantes mais dedicados e qualificados, prontos para enfrentar os desafios do mercado.</p>
                         </div>
-                        <div class="">
-                            <ion-icon class="text-3xl bg-gray-200 rounded-lg p-2 text-blue-500"" name="git-pull-request"></ion-icon>
-                            <h1 class="text-blue-950 font-bold text-md">Lorem ipsum dolor sit.</h1>
-                            <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat error iste autem voluptas vel tempora asperiores ea illum, tenetur, officiis at? Velit doloremque saepe amet iste suscipit cupiditate voluptas. Ipsa!
-                            </p>
-                        </div>
-                        <div class="">
+                        <div class="flex-1">
                             <ion-icon class="text-3xl bg-gray-200 rounded-lg p-2  text-blue-500" name="git-pull-request"></ion-icon>
                             <h1 class="text-blue-950 font-bold text-md">Facil e Rapido</h1>
-                            <p class="text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quo, unde ab, fugiat rerum ipsam veritatis iure, saepe atque enim amet. Commodi sit id praesentium doloribus maiores totam quod adipisci.</p>
+                            <p class="text-gray-400">Fácil e rápido, do jeito que você precisa. Nossa plataforma foi pensada para agilizar processos sem complicações. </p>
                         </div>
                     </div>
                 </div>
