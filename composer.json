@@ -13,6 +13,11 @@
         }
     ],
     "require": {
+<<<<<<< HEAD
         "intervention/image": "^3.11"
+=======
+        "intervention/image": "^3.11",
+        "mpdf/mpdf": "^6.1"
+>>>>>>> 7e7f6c4 (master rebase)
     }
 }
