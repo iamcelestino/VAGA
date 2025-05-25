@@ -30,20 +30,24 @@
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descricao</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Empresa</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feedback</th>
                         </tr>
                     </thead>
+                    <?php if($candidaturas): ?>
+                        <?php foreach($candidaturas as $candidatura): ?>
                     <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">Engenheiro Informatico</td>
-                                <td class="px-6 py-4 whitespace-nowrap">dddddddddddddddd</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Porto Lobito</td>
-                                <td class="px-6 py-4 whitespace-nowrap">trcelestino@gmal.com</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Freelancer</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Contratado</td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?=$candidatura->titulo?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?=$candidatura->descricao?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?=$candidatura->nome_empresa?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?=$candidatura->email_empresa?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?=$candidatura->feedback ? $candidatura->feedback : 'SEM RESPOSTA' ?></td>
                             </tr>
                     </tbody>
+                        <?php endforeach ?>
+                    <?php else: ?>
+                       <h1>Voce ainda nao Apresentou nenhuma candidatura</h1>
+                    <?php endif ?>
                 </table>
             </div>
         </div>

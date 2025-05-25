@@ -2,19 +2,21 @@
 
 namespace App\Controllers;
 use App\Core\{Controller, Database};
-use App\Model\{Auth, Usuario, Endorsamento};
+use App\Model\{Auth, Usuario, Endorsamento, Candidatura};
 
 class Dashboard extends Controller
 {
     public mixed $database;
     public mixed $usuario;
     public mixed $endorsamento;
+    public mixed $candidatura;
 
     public function __construct()
     {
         $this->database = new Database();
         $this->usuario = new Usuario();
         $this->endorsamento = new Endorsamento();
+        $this->candidatura = new Candidatura();
     }
     
     public function index(): void
@@ -29,7 +31,6 @@ class Dashboard extends Controller
             $tipo_usuario = $_SESSION['USUARIO']->tipo_usuario;
             $id_estudante = $_SESSION['USUARIO']->id_usuario;
             $this->estudante($id_estudante);
-
         }
     }
 
@@ -67,12 +68,11 @@ class Dashboard extends Controller
         ]);
     }
 
-    public function estudante(int $id): void
+    public function estudante(int $id_usuario): void
     {    
-        $candidatura = $this->load_model('Candidatura');
-        $dados_candidatura = $candidatura->where('id_estudante', $id);
-
-
-        $this->view('estudante_dashboard');
+        $candidatura_estudante = $this->candidatura->busca_candidatura($id_usuario);
+        $this->view('estudante_dashboard', [
+            'candidaturas' => $candidatura_estudante ?? null
+        ]);
     }
 }
