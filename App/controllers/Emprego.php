@@ -134,5 +134,20 @@ class Emprego extends Controller
             'emprego'=> $emprego[0]
         ]);
     }
+    
+    public function feedback(int $id_estudante): void
+    {
+        $candidatura = $this->load_model('candidatura');
+        $dados_candidatura = $candidatura->where('id_estudante', $id_estudante);
+
+        if(count($_POST) > 0) {
+            $this->candidatura->update($id_estudante, $_POST);
+            $this->redirect('dashboard');
+        }
+
+        $this->view('feedback', [
+            'candidatura' => $dados_candidatura[0]
+        ]);
+    }
 
 }

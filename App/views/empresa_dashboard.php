@@ -6,7 +6,7 @@
                 <div class="flex-1 bg-gray-200 p-8 mb-2 md:mb-0 hover:bg-[#3F3D56] hover:text-white  rounded-md">
                     <a href="" class="">
                         <h3 class="font-bold text-3xl"> </h3>
-                        <P class="font-bold text-2xl">Novos Empregos</P>
+                        <P class="font-bold text-2xl">Meus Empregos</P>
                     </a>
                 </div>
                 <div class="flex-1 bg-gray-200 p-8 mb-2 md:mb-0 hover:bg-[#3F3D56] hover:text-white  rounded-md">
@@ -18,7 +18,7 @@
             </div>
             <div class="mt-5">
                 <div class="md:flex md:items-center md:justify-between mb-4">
-                    <h1 class="font-bold text-2xl">8 candidaturas Apresentadas</h1>
+                    <h1 class="font-bold text-2xl"><?=count($candidaturas)?> candidaturas Apresentadas</h1>
                     <div class="">
                         <a href="<?=BASE_URL?>emprego/postar_emprego" class="py-2 p-4 bg-blue-600 text-white font-bold rounded-md">Postar Emprego</a>
                     </div>
@@ -29,9 +29,8 @@
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estudante</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">titulo da vaga</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">tipo de emprego</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Qualificacao</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feedback</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data Candidatura</th>
+                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feedback</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Accoes</th>
                         </tr>
                     </thead>
@@ -39,19 +38,13 @@
                         <?php foreach($candidaturas as $candidatura): ?>
                     <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
-                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->usuario->usuario->nome) ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->usuario->usuario->email) ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->titulo) ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->tipo_emprego) ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->id_emprego->qualificacao) ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->feedback) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->nome_estudante) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->email_estudante) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->titulo) ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= escape($candidatura->data_candidatura) ?></td>
+                                                                <td class="px-6 py-4 whitespace-nowrap"><?= $candidatura->feedback ? $candidatura->feedback : 'Sem Resposta' ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <form action="">
-                                        <select name="feedback" id="">
-                                            <option value="">Aceite</option>
-                                            <option value="">Recusado</option>
-                                        </select>
-                                    </form>
+                                    <a href="<?=BASE_URL?>emprego/feedback/<?=$candidatura->id_estudante?>">Responder</a>
                                 </td>
                             </tr>
                     </tbody>

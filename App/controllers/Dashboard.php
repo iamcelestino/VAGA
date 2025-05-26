@@ -22,27 +22,23 @@ class Dashboard extends Controller
     public function index(): void
     {
         $tipo_usuario = $_SESSION['USUARIO']->tipo_usuario;
+        $id_usuario = $_SESSION['USUARIO']->id_usuario;
 
         if($tipo_usuario == 'empresa') {
-            $this->empresa();
+            $this->empresa($id_usuario);
         }elseif($tipo_usuario == 'escola') {
             $this->escola();
         }else {
-            $tipo_usuario = $_SESSION['USUARIO']->tipo_usuario;
-            $id_estudante = $_SESSION['USUARIO']->id_usuario;
-            $this->estudante($id_estudante);
+            $this->estudante($id_usuario);
         }
     }
 
-    public function empresa(): void
+    public function empresa(int $id_empresa): void
     {  
-        $candidatura = $this->load_model('Candidatura');
-        $dados_candidatura = $candidatura->findAll();
+        $candidatura_por_empresa = $this->candidatura->candidaturas_por_empresa($id_empresa);
 
-        //FILTRAR POR EMPRESA
-        
         $this->view('empresa_dashboard', [
-            'candidaturas' => $dados_candidatura
+            'candidaturas' =>  $candidatura_por_empresa
         ]);
     }
 

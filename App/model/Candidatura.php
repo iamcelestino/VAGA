@@ -14,10 +14,6 @@ class Candidatura extends Model
 
     protected array $before_insert = [];
 
-    protected array $after_select = [
-        'busca_estudante',
-        'busca_emprego'
-    ];
 
     public function validar(array $dados_candidatura): bool
     {
@@ -45,6 +41,32 @@ class Candidatura extends Model
             $dados[$chave]->id_estudante = is_array($resultado) ? $resultado[0] : false;
         }
         return $dados;
+    }
+
+    public function candidaturas_por_empresa(int $id_empresa): array
+    {
+        return $this->query(
+            "SELECT 
+                u_estudante.nome AS nome_estudante,
+                u_estudante.email AS email_estudante,
+                est.id_estudante,
+                emp.id_emprego,
+                emp.titulo,
+                c.data_candidatura,
+                c.feedback,
+                c.id_estudante,
+                u_empresa.nome AS nome_empresa,
+                u_empresa.email AS email_empresa
+                FROM candidaturas AS c
+                INNER JOIN estudantes AS est ON c.id_estudante = est.id_usuario
+                INNER JOIN usuarios AS u_estudante ON est.id_usuario = u_estudante.id_usuario
+                INNER JOIN empregos AS emp ON c.id_emprego = emp.id_emprego
+                INNER JOIN empresas AS empresa ON emp.id_empresa = empresa.id_usuario
+                INNER JOIN usuarios AS u_empresa ON empresa.id_usuario = u_empresa.id_usuario
+                WHERE u_empresa.id_usuario = :id_empresa
+            ",
+            ['id_empresa' => $id_empresa]
+        );
     }
 
     public function busca_candidatura(int $id_usuario): array
